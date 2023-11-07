@@ -4,27 +4,27 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Ali+Amanat+Ali!;" />
 </h1>
 
-<h3 align="center">A Full Stack Web developer based in Lahore, Pakistan 🇵🇰</h3>
+<h3 align="center">A Full Computer Scientist based in Lahore, Pakistan 🇵🇰</h3>
 
 <br/>
 
 <div align="center">
  
- 🔭 I’m currently working on **MERN Stack**
+ 🔭 I’m currently working on **AI Voice_Over**
  
- 🌱 I’m currently learning **Kotlin, Computer Vision and AWS**
+ 🌱 I’m currently learning **MERN, Kotlin, Computer Vision and AWS**
 
- 💬 Ask me about **React.js, Node.js, Express.js, MongoDB... or anything [here](https://github.com/aliamanatali/aliamanatali/issues)**
+ 💬 Ask me about **Flask, Django, React.js, Node.js, Express.js, MongoDB... or anything [here](https://github.com/aziz6292/aziz6292/issues)**
 
- ⚡ Fun fact **Game of Thrones Night's Watch cloaks are made from Ikea rugs**
+ ⚡ Fun fact **Money Heist Night's Watch cloaks are made from Ikea rugs**
  
  </div>
  
 <div align="center"> 
-  <a href="mailto:aliamanatali218@gmail.com">
+  <a href="mailto:connect2abdulaziz@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
   </a>
-  <a href="https://linkedin.com/in/aliamanatali" target="_blank">
+  <a href="https://linkedin.com/in/abdul-aziz-2a167a277" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
   </a>
   <a href="https://linkedin.com/in/aliamanatali" target="_blank">
