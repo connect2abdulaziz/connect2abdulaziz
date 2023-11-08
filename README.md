@@ -1,7 +1,7 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=aliamanatali.aliamanatali" />
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=aziz6292.aziz6292" />
 
 <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Ali+Amanat+Ali!;" />
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Abdul+Aziz!;" />
 </h1>
 
 <h3 align="center">A Full Computer Scientist based in Lahore, Pakistan 🇵🇰</h3>
@@ -27,7 +27,7 @@
   <a href="https://linkedin.com/in/abdul-aziz-2a167a277" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
   </a>
-  <a href="https://linkedin.com/in/aliamanatali" target="_blank">
+  <a href="https://aziz6292.github.io/abdulaziz-official-website/" target="_blank">
      <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" target="_blank" /> <!-- sqlite, safari, google-chrome are other good icon options -->
   </a>
 </div>
@@ -72,8 +72,8 @@
 <div align="center">
     <h2 align="center">🎖️ Badges Earned 🎖️</h2>
     <br>
-  <a href="holopin.io/@aliamanatali#">
-    <img src="https://holopin.me/aliamanatali#" alt="Holopin badges" />
+  <a href="holopin.io/@aziz6292#">
+    <img src="https://holopin.me/aziz6292#" alt="Holopin badges" />
   </a>
     <br>
     <br>
