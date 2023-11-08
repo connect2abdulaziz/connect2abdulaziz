@@ -12,7 +12,7 @@
  
  🔭 I’m currently working on **AI Voice_Over**
  
- 🌱 I’m currently learning **MERN, Kotlin, Computer Vision and AWS**
+ 🌱 I’m currently learning **NLP, ML, MERN, Kotlin, Computer Vision and AWS**
 
  💬 Ask me about **Flask, Django, React.js, Node.js, Express.js, MongoDB... or anything [here](https://github.com/aziz6292/aziz6292/issues)**
 
@@ -62,7 +62,6 @@
 <br>
 <div align=center>
   <img width=390 src="https://streak-stats.demolab.com/?user=aliamanatali&count_private=true&theme=react&border_radius=10" alt="streak stats"/>
-  <img width=390 src="https://github-readme-stats-salesp07.vercel.app/api?username=aliamanatali&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="readme stats" />
   <br/>
   <img width=325 align="center"src="https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=aliamanatali&hide=Less&langs_count=8&layout=compact&theme=react&border_radius=10&size_weight=0.5&count_weight=0.5&exclude_repo=github-readme-stats" alt="top langs"/>
 </div>
