@@ -69,16 +69,6 @@
 
 <br/><br/>
 <hr/>
-<div align="center">
-    <h2 align="center">🎖️ Badges Earned 🎖️</h2>
-    <br>
-  <a href="holopin.io/@aziz6292#">
-    <img src="https://holopin.me/aziz6292#" alt="Holopin badges" />
-  </a>
-    <br>
-    <br>
-</div>
-<hr/>
 <h3 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=25&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Thanks+for+visiting!+✌️;+Shoot+me+a+message+on+Linkedin!;I'm+always+down+to+collab+:)">
 </h3>
