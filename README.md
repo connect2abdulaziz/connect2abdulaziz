@@ -72,8 +72,8 @@
 <div align="center">
     <h2 align="center">🎖️ Badges Earned 🎖️</h2>
     <br>
-  <a href="holopin.io/@aliamanatali#">
-    <img src="https://holopin.me/aziz6292#" alt="Holopin badges" />
+  <a href="holopin.io/@aziz6292#">
+    <img src="https://holopin.me/aliamanatali#" alt="Holopin badges" />
   </a>
     <br>
     <br>
