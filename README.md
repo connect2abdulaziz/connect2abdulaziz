@@ -1,4 +1,4 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=aziz6292.aziz6292" />
+<img align="right" src="![image](https://github.com/aziz6292/aziz6292/assets/141150154/a470c15c-0773-4ba4-ab6f-06d47d60e56c)" />
 
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Abdul+Aziz!;" />
