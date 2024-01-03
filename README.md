@@ -67,31 +67,6 @@
 </div>
 
 
-<div itemscope="" itemtype="http://schema.org/Person" class="fiverr-seller-widget" style="display: inline-block;">
-  <a itemprop="url" href="https://www.fiverr.com/connect2aziz" rel="nofollow" target="_blank" style="display: inline-block;">
-    <div class="fiverr-seller-content"  style="display: inline-block;">
-      <div class="crop"><img src="https://connect2abdulaziz.github.io/abdulaziz/images/profile-transformed.png" class="fiverr-profile-img">             
-        <div class="overlay"></div>
-      </div>             
-      <img src="https://d2nb1f6l8b7ky0.cloudfront.net/fiverr_icon.png" class="fiverr-icon">              
-      <div class="fiverr-seller-text"> Seller </div>             
-      <div class="fiverr-seller-category"> Programming &amp; Tech </div>             
-      <div class="fiverr-rating-stars" id="fiverr-rating-stars-981415c2-b413-4e99-b01f-8d66baf623da" style="display: block;">  </div>             
-      <div class="check-gigs-btn">Check out my Gigs</div>
-    </div>
-    <div id="fiverr-widget-seller-data" style="display: none;">
-      <div itemprop="name">connect2aziz</div>
-      <div itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name">Fiverr</span></div>
-      <div itemprop="jobtitle">Seller</div>
-      <div itemprop="description">As a dedicated computer scientist, I specialize in crafting tailored solutions for a diverse range of clients. My expertise spans across iOS, Web, Web API, Android, and Desktop application development, ensuring that your projects are executed flawlessly and meet your specific requirements. By combining my passion for innovation with my commitment to excellence, I'm ready to help you bring your ideas to life. Let's connect and transform your vision into reality!</div>
-    </div>
-  </a>
-</div>
-
-<script id="fiverr-seller-widget-script-981415c2-b413-4e99-b01f-8d66baf623da" src="https://widgets.fiverr.com/api/v1/seller/connect2aziz?widget_id=981415c2-b413-4e99-b01f-8d66baf623da" data-config="{&quot;category_name&quot;:&quot;Programming \u0026 Tech&quot;}" async="true" defer="true"></script>
-
-
-
 
 
 <br/><br/>
