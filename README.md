@@ -10,9 +10,9 @@
 
 <div align="center">
  
- 🔭 I’m currently working on **AI Voice_Over**
+ 🔭 I’m currently working on **React.js, Node.js, Express.js Typescript, PostgreSQL and AWS**
  
- 🌱 I’m currently learning **NLP, ML, MERN, Kotlin, Computer Vision and AWS**
+ 🌱 I’m currently learning **Amazon Web Services, MERN, Advance Web Technologies and AWS**
 
  💬 Ask me about **Flask, Django, React.js, Node.js, Express.js, MongoDB... or anything [here](https://github.com/connect2abdulaziz/connect2abdulaziz/issues)**
 
