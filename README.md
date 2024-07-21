@@ -4,7 +4,7 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Abdul+Aziz!;" />
 </h1>
 
-<h3 align="center">Computer Scientist based in Lahore, Pakistan 🇵🇰</h3>
+<h3 align="center">Software Engineer based in Lahore, Pakistan 🇵🇰</h3>
 
 <br/>
 
@@ -12,7 +12,7 @@
  
  🔭 I’m currently working on **React.js, Node.js, Express.js Typescript, PostgreSQL and AWS**
  
- 🌱 I’m currently learning **Amazon Web Services, MERN, Advance Web Technologies and AWS**
+ 🌱 I’m currently learning **Amazon Web Services, MERN and  Advance Web Technologies**
 
  💬 Ask me about **Flask, Django, React.js, Node.js, Express.js, MongoDB... or anything [here](https://github.com/connect2abdulaziz/connect2abdulaziz/issues)**
 
