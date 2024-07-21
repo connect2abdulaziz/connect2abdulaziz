@@ -14,7 +14,7 @@
  
  🌱 I’m currently learning **Amazon Web Services, MERN and  Advance Web Technologies**
 
- 💬 Ask me about **Flask, Django, React.js, Node.js, Express.js, MongoDB... or anything [here](https://github.com/connect2abdulaziz/connect2abdulaziz/issues)**
+ 💬 Ask me about **Problem Solving, Development, React.js, Node.js, Express.js, MongoDB... or anything [here](https://github.com/connect2abdulaziz/connect2abdulaziz/issues)**
 
  ⚡ Fun fact **Money Heist Night's Watch cloaks are made from Ikea rugs**
  
