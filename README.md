@@ -4,7 +4,7 @@
 
 <div align="center">
   
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=4158D0&center=true&vCenter=true&width=600&lines=Building+the+Future+with+Code+%F0%9F%9A%80;MERN+Stack+Expert+%7C+TypeScript+Specialist;AI+%26+LangChain+Integration+Master;4.0+CGPA+%7C+Top+10+ICPC+Performer;Always+Learning%2C+Always+Growing+%F0%9F%8C%9F)](https://git.io/typing-svg)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=4158D0&center=true&vCenter=true&width=600&lines=Building+the+Future+with+Code+%F0%9F%9A%80;MERN+Stack+Expert+%7C+TypeScript+Specialist;AI+%26+LangChain+Integration+Master;4.0+CGPA+%7C+Top+10+ICPC+Performer;Always+Learning%2C+Always+Growing+%F0%9F%8C%9F;%22Code+is+Poetry+Written+in+Logic%22+%E2%9C%A8)](https://git.io/typing-svg)
   
 </div>
 
@@ -14,6 +14,10 @@
   <img src="https://komarev.com/ghpvc/?username=connect2abdulaziz&style=for-the-badge&color=4158D0&label=PROFILE+VIEWS" alt="Profile Views" />
   <img src="https://img.shields.io/github/followers/connect2abdulaziz?style=for-the-badge&color=4158D0&labelColor=1a1b27" alt="Followers" />
   <img src="https://img.shields.io/badge/Focus-Full%20Stack%20Development-4158D0?style=for-the-badge&labelColor=1a1b27" alt="Focus" />
+</div>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 </div>
 
 ---
@@ -28,6 +32,8 @@
 ⭐ **LeetCode Top 5%** Problem Solver  
 🌟 **"Student of the Year"** at Akhuwat College Kasur (2017)  
 
+<img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
+
 ### 🎯 **Current Focus**
 - 🔭 Leading backend architecture with **MERN/Next.js**
 - 🤖 Building AI solutions with **LangChain & LangGraph**
@@ -36,12 +42,24 @@
 
 <br/>
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="100">
+</div>
+
 ## 💻 **Tech Arsenal**
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="100"><img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="100">
+  
+  <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385b1974c1.gif" width="100"><img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="100"><img src="https://user-images.githubusercontent.com/74038190/212257460-738ff738-247f-4445-a718-cdd0ca76e2db.gif" width="100"><img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="100">
+</div>
 
 <details>
 <summary><b>🔥 Core Technologies</b></summary>
 <br/>
 
+<div align="center">
+  
 **Frontend Development**
 <div>
   <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,html,css,tailwind,bootstrap,vue" />
@@ -62,6 +80,8 @@
   <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,linux" />
 </div>
 
+</div>
+
 </details>
 
 <div align="center">
@@ -70,18 +90,26 @@
 
 | **Domain** | **Technologies** | **Proficiency** |
 |------------|------------------|----------------|
-| **Frontend** | React, Next.js, TypeScript, Vue.js | ⭐⭐⭐⭐⭐ |
-| **Backend** | Node.js, Express.js, Python, Flask | ⭐⭐⭐⭐⭐ |
-| **Database** | MongoDB, PostgreSQL, MySQL | ⭐⭐⭐⭐⭐ |
-| **AI/ML** | LangChain, LangGraph, LLMs | ⭐⭐⭐⭐⭐ |
-| **Cloud** | AWS, Firebase | ⭐⭐⭐⭐ |
-| **DevOps** | Docker, Git/GitHub, CI/CD | ⭐⭐⭐⭐ |
+| **Frontend** | React, Next.js, TypeScript, Vue.js | <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50"> |
+| **Backend** | Node.js, Express.js, Python, Flask | <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50"> |
+| **Database** | MongoDB, PostgreSQL, MySQL | <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50"> |
+| **AI/ML** | LangChain, LangGraph, LLMs | <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50"> |
+| **Cloud** | AWS, Firebase | <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="50"> |
+| **DevOps** | Docker, Git/GitHub, CI/CD | <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="50"> |
 
+</div>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 </div>
 
 ---
 
 ## 🏢 **Professional Journey**
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="50">
+</div>
 
 <div align="center">
 
@@ -100,15 +128,27 @@ graph LR
 </div>
 
 ### 🎖️ **Key Achievements**
-- 🥇 **Top 10 Rank** - ICPC Asia Online Preliminary Programming Contest 2023
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="30"> **Top 10 Rank** - ICPC Asia Online Preliminary Programming Contest 2023 <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="30">
+</div>
+
 - 🏆 **"Student of the Year"** - Akhuwat College Kasur (2017)
 - 🎯 **Rank 1** - Quick Mind Game Competition
 - 💻 **LeetCode Top 5%** - Problem Solving Excellence
 - 📈 **4.0 CGPA** - Core Programming Subjects at PUCIT
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+</div>
+
 ---
 
 ## 📊 **GitHub Analytics**
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="50">
+</div>
 
 <div align="center">
   
@@ -132,9 +172,24 @@ graph LR
 </div>
 
 <div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50">
+</div>
+
+<div align="center">
   
 ### **📈 Contribution Graph**
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=connect2abdulaziz&custom_title=Abdul%20Aziz's%20GitHub%20Activity%20Graph&bg_color=0D1117&color=4158D0&line=4158D0&point=C850C0&area=true&hide_border=true" />
+
+</div>
+
+<div align="center">
+  
+### **🐍 Contribution Snake Animation**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/connect2abdulaziz/connect2abdulaziz/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/connect2abdulaziz/connect2abdulaziz/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/connect2abdulaziz/connect2abdulaziz/output/github-contribution-grid-snake.svg">
+</picture>
 
 </div>
 
@@ -143,12 +198,16 @@ graph LR
 ## 🎨 **Featured Projects**
 
 <div align="center">
-
+  <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="50">
+  
 ### **🌟 Spotlight Projects**
 
 <table>
 <tr>
 <td width="50%">
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="50">
+</div>
 
 **🤖 AI-Powered Development Tools**
 - LangChain & LangGraph implementations
@@ -157,6 +216,9 @@ graph LR
 
 </td>
 <td width="50%">
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="50">
+</div>
 
 **🚀 Full Stack Applications**
 - MERN Stack masterpieces
@@ -169,9 +231,17 @@ graph LR
 
 </div>
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+</div>
+
 ---
 
 ## 🌐 **Connect With Me**
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50">
+</div>
 
 <div align="center">
   
@@ -182,9 +252,17 @@ graph LR
 
 </div>
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+</div>
+
 ---
 
 ## 💡 **Current Status**
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="100">
+</div>
 
 <div align="center">
   
@@ -202,9 +280,17 @@ const abdulAziz = {
 
 </div>
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50">
+</div>
+
 ---
 
 ## 📈 **Weekly Development Breakdown**
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="100">
+</div>
 
 <!--START_SECTION:waka-->
 ```text
@@ -216,15 +302,27 @@ Other        8 mins          ░░░░░░░░░░░░░░░░░
 ```
 <!--END_SECTION:waka-->
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+</div>
+
 ---
 
 ## 🎯 **2025 Goals**
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="50">
+</div>
+
 - 🚀 **Master advanced AI/ML concepts** and implement cutting-edge solutions
-- 🌟 **Contribute to major open-source projects** in the React/Node.js ecosystem
+- 🌟 **Contribute to major open-source projects** in the React/Node.js ecosystem  
 - 📚 **Mentor junior developers** and build a strong tech community
 - 🏆 **Lead innovative projects** that make a real-world impact
 - 🎓 **Pursue advanced certifications** in cloud technologies
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50">
+</div>
 
 ---
 
@@ -232,12 +330,20 @@ Other        8 mins          ░░░░░░░░░░░░░░░░░
   
 ### **💫 Let's Build Something Amazing Together!**
 
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,100:C850C0&height=120&section=footer&animation=twinkling" />
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="50"><img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="50"><img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385b1974c1.gif" width="50">
+</div>
 
 **"Code is poetry written in logic. Let's create digital masterpieces that inspire and innovate!"**
 
 ⭐ **Star my repositories if you find them helpful!**  
 🤝 **Open to collaborations and exciting opportunities**  
 📫 **Reach out for any technical discussions or project ideas**
+
+<img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="50">
 
 </div>
