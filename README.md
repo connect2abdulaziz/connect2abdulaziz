@@ -1,78 +1,243 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=connect2abdulaziz.connect2abdulaziz" />
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,100:C850C0&height=150&section=header&text=Abdul%20Aziz&fontSize=50&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Senior%20Full%20Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Team%20Lead&descAlignY=55&descSize=18" />
+</div>
 
-<h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Abdul+Aziz!;" />
-</h1>
-
-<h3 align="center">Software Engineer based in Lahore, Pakistan 🇵🇰</h3>
+<div align="center">
+  
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=4158D0&center=true&vCenter=true&width=600&lines=Building+the+Future+with+Code+%F0%9F%9A%80;MERN+Stack+Expert+%7C+TypeScript+Specialist;AI+%26+LangChain+Integration+Master;4.0+CGPA+%7C+Top+10+ICPC+Performer;Always+Learning%2C+Always+Growing+%F0%9F%8C%9F)](https://git.io/typing-svg)
+  
+</div>
 
 <br/>
 
 <div align="center">
- 
- 🔭 I’m currently working on **React.js, Node.js, Express.js Typescript, PostgreSQL and AWS**
- 
- 🌱 I’m currently learning **Amazon Web Services, MERN and  Advance Web Technologies**
-
- 💬 Ask me about **Problem Solving, Development, React.js, Node.js, Express.js, MongoDB... or anything [here](https://github.com/connect2abdulaziz/connect2abdulaziz/issues)**
-
- ⚡ Fun fact **Money Heist Night's Watch cloaks are made from Ikea rugs**
- 
- </div>
- 
-<div align="center"> 
-  <a href="mailto:connect2abdulaziz@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
-  </a>
-  <a href="https://linkedin.com/in/connect2abdulaziz" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
-  </a>
-  <a href="https://connect2abdulaziz.github.io/abdulaziz/" target="_blank">
-     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" target="_blank" /> <!-- sqlite, safari, google-chrome are other good icon options -->
-  </a>
+  <img src="https://komarev.com/ghpvc/?username=connect2abdulaziz&style=for-the-badge&color=4158D0&label=PROFILE+VIEWS" alt="Profile Views" />
+  <img src="https://img.shields.io/github/followers/connect2abdulaziz?style=for-the-badge&color=4158D0&labelColor=1a1b27" alt="Followers" />
+  <img src="https://img.shields.io/badge/Focus-Full%20Stack%20Development-4158D0?style=for-the-badge&labelColor=1a1b27" alt="Focus" />
 </div>
 
- <hr/>
- 
-<h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
-<br/>
-<div align="center">
-    <img src="https://skillicons.dev/icons?i=react,bootstrap,html,css,vscode,github,tailwind,git,python,nextjs" />
-    <img src="https://skillicons.dev/icons?i=nodejs,javascript,typescript,express,firebase,mongodb,cpp,c,mysql,flask" /><br>
-</div>
+---
+
+## 🚀 **About Me**
+
+<img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
+
+🎓 **PUCIT Graduate** with 4.0 CGPA in core programming subjects  
+💼 **Senior Software Engineer & Team Lead** at Developer Tag  
+🏆 **Top 10 Rank** in ICPC Asia Online Preliminary Programming Contest 2023  
+⭐ **LeetCode Top 5%** Problem Solver  
+🌟 **"Student of the Year"** at Akhuwat College Kasur (2017)  
+
+### 🎯 **Current Focus**
+- 🔭 Leading backend architecture with **MERN/Next.js**
+- 🤖 Building AI solutions with **LangChain & LangGraph**
+- 🛠️ Implementing **DevOps** and **Git workflows**
+- 📚 Exploring advanced **AWS** services
 
 <br/>
-<hr/>
 
-<div align="center">
-  <h2>🐍 My Contributions 🐍</h2>
-  <br>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aliamanatali/aliamanatali/output/github-contribution-grid-snake.svg">
-  <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/aliamanatali/aliamanatali/output/github-contribution-grid-snake.svg" />
-  <br/><br/><br/>
-</div>
+## 💻 **Tech Arsenal**
+
+<details>
+<summary><b>🔥 Core Technologies</b></summary>
+<br/>
+
+**Frontend Development**
 <div>
+  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,html,css,tailwind,bootstrap,vue" />
 </div>
 
-
-<hr/>
-
-<h2 align="center">⚡ Stats ⚡</h2>
-<br>
-<div align=center>
-  <img width=390 src="https://streak-stats.demolab.com/?user=aliamanatali&count_private=true&theme=react&border_radius=10" alt="streak stats"/>
-  <br/>
-  <img width=325 align="center"src="https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=aliamanatali&hide=Less&langs_count=8&layout=compact&theme=react&border_radius=10&size_weight=0.5&count_weight=0.5&exclude_repo=github-readme-stats" alt="top langs"/>
+**Backend Development**
+<div>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,python,flask,cpp,c" />
 </div>
 
+**Databases & Cloud**
+<div>
+  <img src="https://skillicons.dev/icons?i=mongodb,mysql,postgresql,firebase,aws" />
+</div>
 
+**Tools & DevOps**
+<div>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,linux" />
+</div>
 
+</details>
 
-<br/><br/>
-<hr/>
-<h3 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=25&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Thanks+for+visiting!+✌️;+Shoot+me+a+message+on+Linkedin!;I'm+always+down+to+collab+:)">
-</h3>
+<div align="center">
+  
+### **🎨 Skills Matrix**
 
-<br/>
+| **Domain** | **Technologies** | **Proficiency** |
+|------------|------------------|----------------|
+| **Frontend** | React, Next.js, TypeScript, Vue.js | ⭐⭐⭐⭐⭐ |
+| **Backend** | Node.js, Express.js, Python, Flask | ⭐⭐⭐⭐⭐ |
+| **Database** | MongoDB, PostgreSQL, MySQL | ⭐⭐⭐⭐⭐ |
+| **AI/ML** | LangChain, LangGraph, LLMs | ⭐⭐⭐⭐⭐ |
+| **Cloud** | AWS, Firebase | ⭐⭐⭐⭐ |
+| **DevOps** | Docker, Git/GitHub, CI/CD | ⭐⭐⭐⭐ |
+
+</div>
+
+---
+
+## 🏢 **Professional Journey**
+
+<div align="center">
+
+```mermaid
+graph LR
+    A[Summer Intern<br/>DevTown & Pyflow] --> B[Associate Software Engineer<br/>Kwanso]
+    B --> C[Software Engineer<br/>DiveScale<br/>4 months]
+    C --> D[Senior Software Engineer<br/>& Team Lead<br/>Developer Tag]
+    
+    style A fill:#ff6b6b,stroke:#fff,stroke-width:2px,color:#fff
+    style B fill:#4ecdc4,stroke:#fff,stroke-width:2px,color:#fff
+    style C fill:#45b7d1,stroke:#fff,stroke-width:2px,color:#fff
+    style D fill:#96ceb4,stroke:#fff,stroke-width:2px,color:#fff
+```
+
+</div>
+
+### 🎖️ **Key Achievements**
+- 🥇 **Top 10 Rank** - ICPC Asia Online Preliminary Programming Contest 2023
+- 🏆 **"Student of the Year"** - Akhuwat College Kasur (2017)
+- 🎯 **Rank 1** - Quick Mind Game Competition
+- 💻 **LeetCode Top 5%** - Problem Solving Excellence
+- 📈 **4.0 CGPA** - Core Programming Subjects at PUCIT
+
+---
+
+## 📊 **GitHub Analytics**
+
+<div align="center">
+  
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=connect2abdulaziz&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&icon_color=4158D0&text_color=FFFFFF&border_radius=10" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=connect2abdulaziz&theme=tokyonight&hide_border=true&background=0D1117&stroke=4158D0&ring=4158D0&fire=C850C0&currStreakLabel=C850C0&border_radius=10" />
+
+</div>
+
+<div align="center">
+  
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=connect2abdulaziz&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&text_color=FFFFFF&border_radius=10" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=connect2abdulaziz&theme=tokyonight&utcOffset=5" />
+
+</div>
+
+<div align="center">
+  
+### **🏆 GitHub Trophies**
+<img src="https://github-profile-trophy.vercel.app/?username=connect2abdulaziz&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1" />
+
+</div>
+
+<div align="center">
+  
+### **📈 Contribution Graph**
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=connect2abdulaziz&custom_title=Abdul%20Aziz's%20GitHub%20Activity%20Graph&bg_color=0D1117&color=4158D0&line=4158D0&point=C850C0&area=true&hide_border=true" />
+
+</div>
+
+---
+
+## 🎨 **Featured Projects**
+
+<div align="center">
+
+### **🌟 Spotlight Projects**
+
+<table>
+<tr>
+<td width="50%">
+
+**🤖 AI-Powered Development Tools**
+- LangChain & LangGraph implementations
+- Advanced AI integrations
+- Real-time chat applications
+
+</td>
+<td width="50%">
+
+**🚀 Full Stack Applications**
+- MERN Stack masterpieces
+- TypeScript-powered solutions
+- Modern UI/UX designs
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+## 🌐 **Connect With Me**
+
+<div align="center">
+  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/connect2abdulaziz)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://connect2abdulaziz.github.io/abdulaziz/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:connect2abdulaziz@gmail.com)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/connect2abdulaziz)
+
+</div>
+
+---
+
+## 💡 **Current Status**
+
+<div align="center">
+  
+```typescript
+const abdulAziz = {
+    location: "Lahore, Pakistan 🇵🇰",
+    role: "Senior Software Engineer & Team Lead",
+    company: "Developer Tag",
+    focusAreas: ["MERN Stack", "AI Integration", "Team Leadership"],
+    currentlyLearning: ["Advanced AWS", "DevOps", "AI/ML"],
+    lookingFor: "Innovative projects and collaboration opportunities",
+    funFact: "I can debug code faster than I can explain why it works! 😄"
+};
+```
+
+</div>
+
+---
+
+## 📈 **Weekly Development Breakdown**
+
+<!--START_SECTION:waka-->
+```text
+TypeScript   8 hrs 35 mins   ████████████░░░░░░░░░░░░░   48.2%
+JavaScript   4 hrs 12 mins   ██████░░░░░░░░░░░░░░░░░░░   23.6%
+React        3 hrs 8 mins    ████░░░░░░░░░░░░░░░░░░░░░   17.6%
+Python       1 hr 45 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   9.8%
+Other        8 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   0.8%
+```
+<!--END_SECTION:waka-->
+
+---
+
+## 🎯 **2025 Goals**
+
+- 🚀 **Master advanced AI/ML concepts** and implement cutting-edge solutions
+- 🌟 **Contribute to major open-source projects** in the React/Node.js ecosystem
+- 📚 **Mentor junior developers** and build a strong tech community
+- 🏆 **Lead innovative projects** that make a real-world impact
+- 🎓 **Pursue advanced certifications** in cloud technologies
+
+---
+
+<div align="center">
+  
+### **💫 Let's Build Something Amazing Together!**
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,100:C850C0&height=120&section=footer&animation=twinkling" />
+
+**"Code is poetry written in logic. Let's create digital masterpieces that inspire and innovate!"**
+
+⭐ **Star my repositories if you find them helpful!**  
+🤝 **Open to collaborations and exciting opportunities**  
+📫 **Reach out for any technical discussions or project ideas**
+
+</div>
