@@ -57,31 +57,6 @@
 
 </div>
 
-<details>
-<summary><b>📊 Real Development Language Breakdown</b></summary>
-<br/>
-
-<div align="center">
-
-<!-- Accurate Primary Languages Only -->
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=connect2abdulaziz&layout=pie&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&text_color=FFFFFF&border_radius=10&langs_count=6&hide=jupyter%20notebook,html,css,dockerfile,makefile&custom_title=Core+Programming+Languages" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=connect2abdulaziz&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&text_color=FFFFFF&border_radius=10&langs_count=5&hide=jupyter%20notebook,html,css,dockerfile,makefile&custom_title=Primary+Development+Stack" />
-
-**📈 Actual Language Usage (Corrected)**
-- **TypeScript**: 35% - Primary development language for modern applications
-- **JavaScript**: 28% - Full-stack web development and Node.js backends  
-- **Python**: 25% - AI/ML solutions, automation, and data processing
-- **SQL**: 8% - Database design and optimization
-- **Shell**: 4% - DevOps scripts and automation
-
-**🔧 Why the Fix Was Needed:**
-- ❌ **Before**: Jupyter notebooks were incorrectly dominating stats (60%+)
-- ✅ **After**: Shows actual coding languages used in production
-- 🎯 **Accurate**: Reflects real development work, not data analysis notebooks
-
-</div>
-
-</details>
 
 ---
 
@@ -205,7 +180,7 @@ JSON/Config      1 hr 7 mins     ██░░░░░░░░░░░░░�
 <div align="center">
   
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://linkedin.com/in/connect2abdulaziz)](https://linkedin.com/in/connect2abdulaziz)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white&link=https://connect2abdulaziz.github.io/abdulaziz/)](https://connect2abdulaziz.github.io/abdulaziz/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white&link=https://portfolio-website-gamma-five-80.vercel.app/)](https://portfolio-website-gamma-five-80.vercel.app/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:connect2abdulaziz@gmail.com)](mailto:connect2abdulaziz@gmail.com)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black&link=https://leetcode.com/connect2abdulaziz)](https://leetcode.com/connect2abdulaziz)
 
