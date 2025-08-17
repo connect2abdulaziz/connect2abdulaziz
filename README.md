@@ -95,7 +95,7 @@ timeline
 ## Connect
 
 * **LinkedIn:** [linkedin.com/in/connect2abdulaziz](https://linkedin.com/in/connect2abdulaziz)
-* **Portfolio:** [portfolio-website-gamma-five-80.vercel.app](https://portfolio-website-gamma-five-80.vercel.app/)
+* **Portfolio:** [connect2abdulaziz-psi.vercel.app/](https://connect2abdulaziz-psi.vercel.app/)
 * **LeetCode:** [leetcode.com/connect2abdulaziz](https://leetcode.com/connect2abdulaziz)
 * **Email:** [connect2abdulaziz@gmail.com](mailto:connect2abdulaziz@gmail.com)
 
