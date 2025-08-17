@@ -84,10 +84,10 @@
 ```mermaid
 timeline
     title Professional Journey
-    2021 : Summer Intern @ DevTown & Pyflow
-    2022 : Associate Software Engineer @ Kwanso
-    2023 : Software Engineer @ DiveScale
-    2024-Present : Senior Software Engineer & Team Lead @ Developer Tag
+    2023 : Summer Intern @ DevTown & Pyflow
+    2024 : Associate Software Engineer @ Kwanso
+    2025 : Software Engineer @ DiveScale
+    2025-Present : Senior Software Engineer & Team Lead @ Developer Tag
 ````
 
 ---
