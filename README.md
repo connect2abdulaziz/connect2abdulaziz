@@ -103,12 +103,13 @@ timeline
 
 ## 2025 Goals
 
-* Master advanced **AI/ML frameworks**
-* Contribute to **5+ major open-source projects**
-* Architect **enterprise-scale solutions** serving 100k+ users
-* Obtain **AWS Solutions Architect certification**
-* Mentor **50+ junior developers**
-* Launch **AI consultancy** specializing in LangChain
+* Advance expertise in **Backend Architecture & Microservices**  
+* Build **enterprise-grade distributed systems** serving 100k+ users  
+* Deepen knowledge of **AWS cloud, serverless, and advanced DevOps workflows**  
+* Obtain **AWS Solutions Architect & DevOps Professional certifications**  
+* Mentor and grow **50+ developers** in backend engineering best practices  
+* Establish a **consultancy for scalable backend and DevOps solutions**  
+
 
 ---
 
