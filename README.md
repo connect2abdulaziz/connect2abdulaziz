@@ -105,10 +105,12 @@ timeline
 
 ## Connect
 
-* **LinkedIn:** [linkedin.com/in/connect2abdulaziz](https://linkedin.com/in/connect2abdulaziz)
-* **Portfolio:** [connect2abdulaziz-psi.vercel.app/](https://connect2abdulaziz-psi.vercel.app/)
-* **LeetCode:** [leetcode.com/connect2abdulaziz](https://leetcode.com/connect2abdulaziz)
-* **Email:** [connect2abdulaziz@gmail.com](mailto:connect2abdulaziz@gmail.com)
+| Platform   | Link |
+|------------|------|
+| LinkedIn   | [linkedin.com/in/connect2abdulaziz](https://linkedin.com/in/connect2abdulaziz) |
+| Portfolio  | [connect2abdulaziz-psi.vercel.app](https://connect2abdulaziz-psi.vercel.app/) |
+| LeetCode   | [leetcode.com/connect2abdulaziz](https://leetcode.com/connect2abdulaziz) |
+| Email      | [connect2abdulaziz@gmail.com](mailto:connect2abdulaziz@gmail.com) |
 
 ---
 
