@@ -55,7 +55,7 @@
 <div align="center">
 
 <!-- Top Languages card (includes private repos since using self-host + count_private=true) -->
-<img width="49%" src="https://github-readme-stats-weld-iota-73.vercel.app/api/top-langs/?username=connect2abdulaziz&layout=compact&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&text_color=FFFFFF&border_radius=10" />
+<img width="49%" src="https://github-readme-stats-weld-iota-73.vercel.app/api/top-langs/?username=connect2abdulaziz&layout=compact&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&text_color=FFFFFF&border_radius=10&hide=jupyter%20notebook,css,html" />
 
 </div>
 
