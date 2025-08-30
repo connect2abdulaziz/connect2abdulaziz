@@ -81,7 +81,6 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=connect2abdulaziz&bg_color=0D1117&color=4158D0&line=4158D0&point=C850C0&area=true&hide_border=true&theme=tokyo-night" />
 </p>
 
-> **Private contributions:** Enable **Profile → Settings → Contributions → Include private contributions on my profile**. For the stats cards above, you’re already using a self‑hosted deployment with `count_private=true`. Ensure that deployment has a PAT with scopes `repo` and `read:user` so private activity is included.
 
 ---
 
