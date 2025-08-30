@@ -65,7 +65,7 @@
 ### Impact & activity
 
 <p align="center">
-  <img src="./metrics.svg" alt="GitHub Metrics" />
+  <img src="./github-metrics.svg" alt="GitHub Metrics" />
 </p>
 
 <p align="center">
