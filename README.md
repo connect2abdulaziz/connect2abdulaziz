@@ -8,7 +8,7 @@
 
 </div>
 
-<h2 align="center">Senior Full‑Stack Engineer · AI Innovator · Team Lead @ <strong>Developer Tag</strong></h2>
+<h3 align="center">Senior Software Engineer · AI Innovator · Team Lead @ <strong>Developer Tag</strong></h3>
 
 <p align="center">
   <a href="https://connect2abdulaziz-psi.vercel.app">Portfolio</a> ·
