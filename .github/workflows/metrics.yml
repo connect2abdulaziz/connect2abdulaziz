@@ -1,21 +1,41 @@
 name: Metrics
 on:
   schedule:
-    - cron: "22 3 * * *"   # daily at 03:22 UTC
+    - cron: "22 3 * * *"    # daily
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - .github/workflows/metrics.yml
+
+permissions:
+  contents: write   # allow committing metrics.svg
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate metrics
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate & commit metrics.svg
         uses: lowlighter/metrics@latest
         with:
+          # PAT for reading your activity (public_repo or repo if you want private stats)
           token: ${{ secrets.METRICS_TOKEN }}
+
+          # This lets the action commit the file to your repo (no manual git needed)
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_branch: main
+          filename: metrics.svg
+
           user: connect2abdulaziz
           template: classic
           base: header, activity, community, repositories
           config_timezone: Asia/Karachi
+
+          # plugins (tweak as you like)
           plugin_followup: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
@@ -27,16 +47,3 @@ jobs:
           plugin_repositories: yes
           plugin_topics: yes
           plugin_topics_limit: 12
-      - name: Save SVG to repo
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git init
-          git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
-          git fetch --depth=1 origin
-          git checkout -B main || git checkout -B master || true
-          echo "Generated on $(date -u)" > .metrics_timestamp
-          mv metrics.svg metrics.svg || true
-          git add metrics.svg .metrics_timestamp
-          git commit -m "chore(metrics): update metrics.svg"
-          git push origin HEAD
