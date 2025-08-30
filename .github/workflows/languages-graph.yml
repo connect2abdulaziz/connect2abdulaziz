@@ -1,0 +1,45 @@
+name: Languages Graph
+on:
+  schedule:
+    - cron: "17 4 * * *"   # daily at 04:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - .github/workflows/languages-graph.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install requests matplotlib
+
+      - name: Generate languages.svg
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}   # PAT with public_repo or repo
+        run: |
+          python scripts/generate_languages.py
+
+      - name: Commit & push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add languages.svg
+          git commit -m "chore(langs): update languages.svg" || echo "no changes"
+          git remote set-url origin https://${{ github.actor }}:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          git push origin HEAD:${{ github.ref_name }}
