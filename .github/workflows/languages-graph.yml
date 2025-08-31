@@ -149,7 +149,7 @@ jobs:
               
               # Chart dimensions
               WIDTH = 1000
-              LEFT_MARGIN = 36
+              LEFT_MARGIN = 100
               RIGHT_MARGIN = 36
               TOP_MARGIN = 100
               BOTTOM_MARGIN = 100
