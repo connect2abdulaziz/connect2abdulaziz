@@ -44,7 +44,7 @@ jobs:
           API_ENDPOINT = "https://api.github.com/graphql"
           HEADERS = {"Authorization": f"Bearer {TOKEN}"}
           IGNORED_LANGUAGES = {"HTML", "CSS", "Jupyter Notebook", "Dockerfile", "Makefile"}
-          MIN_PERCENTAGE_THRESHOLD = 3.0
+          MIN_PERCENTAGE_THRESHOLD = 1.0
           MAX_LANGUAGES_DISPLAY = 8
 
           def fetch_language_data() -> Dict[str, int]:
@@ -148,7 +148,7 @@ jobs:
                   """
               
               # Chart dimensions
-              WIDTH = 860
+              WIDTH = 1000
               LEFT_MARGIN = 170
               RIGHT_MARGIN = 36
               TOP_MARGIN = 52
