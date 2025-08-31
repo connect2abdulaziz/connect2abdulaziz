@@ -71,7 +71,7 @@
 </p>
 
 <p align="center">
-  <img src="./languages.svg" alt="Languages (public + private repos)" />
+  <img width="95%" src="./languages.svg" alt="Languages (public + private repos)" />
 </p>
 
 <p align="center">
