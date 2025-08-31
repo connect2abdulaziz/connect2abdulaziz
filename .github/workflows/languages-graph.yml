@@ -1,13 +1,8 @@
 name: Languages Graph
 on:
   schedule:
-    - cron: "17 4 * * *"   # daily at 04:17 UTC
+    - cron: "17 4 * * *"   # daily
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - README.md
-      - .github/workflows/languages-graph.yml
 
 permissions:
   contents: write
@@ -29,9 +24,85 @@ jobs:
 
       - name: Generate languages.svg
         env:
-          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}   # PAT with public_repo or repo
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
-          python scripts/generate_languages.py
+          python <<'EOF'
+          import os, sys, requests, math
+          import matplotlib.pyplot as plt
+
+          TOKEN = os.environ.get("GH_TOKEN")
+          if not TOKEN:
+              sys.exit("Missing GH_TOKEN")
+
+          API = "https://api.github.com/graphql"
+          HEADERS = {"Authorization": f"Bearer {TOKEN}"}
+          ignored = {"HTML", "CSS", "Jupyter Notebook"}
+          lang_sizes = {}
+          after = None
+
+          while True:
+              q = {
+                  "query": """
+                  query($after: String) {
+                    viewer {
+                      repositories(first: 100, after: $after, affiliations: [OWNER, ORGANIZATION_MEMBER, COLLABORATOR], isFork: false, orderBy: {field: UPDATED_AT, direction: DESC}) {
+                        pageInfo { hasNextPage endCursor }
+                        nodes {
+                          languages(first: 100, orderBy: {field: SIZE, direction: DESC}) {
+                            edges { size node { name } }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  """,
+                  "variables": {"after": after}
+              }
+              r = requests.post(API, json=q, headers=HEADERS, timeout=60)
+              r.raise_for_status()
+              data = r.json()
+              repos = data["data"]["viewer"]["repositories"]
+              for repo in repos["nodes"]:
+                  for e in repo["languages"]["edges"]:
+                      name = e["node"]["name"]
+                      if name in ignored:
+                          continue
+                      lang_sizes[name] = lang_sizes.get(name, 0) + int(e["size"])
+              if not repos["pageInfo"]["hasNextPage"]:
+                  break
+              after = repos["pageInfo"]["endCursor"]
+
+          if not lang_sizes:
+              with open("languages.svg", "w") as f:
+                  f.write("<svg xmlns='http://www.w3.org/2000/svg' width='600' height='60'><text x='10' y='35' font-family='sans-serif' font-size='16'>No language data yet</text></svg>")
+              sys.exit(0)
+
+          items = sorted(lang_sizes.items(), key=lambda x: x[1], reverse=True)
+          total = sum(v for _, v in items)
+          percent = [(k, v/total*100.0) for k, v in items]
+          major = [(k, p) for k, p in percent if p >= 3.0]
+          other = sum(p for _, p in percent if p < 3.0)
+          if other > 0:
+              major.append(("Other", other))
+          labels = [k for k, _ in major]
+          sizes = [p for _, p in major]
+
+          fig = plt.figure(figsize=(8, 5), dpi=160)
+          ax = fig.add_subplot(111)
+          wedges, texts = ax.pie(sizes, startangle=180, wedgeprops=dict(width=0.45))
+          ax.axis('equal')
+
+          for w, l, p in zip(wedges, labels, sizes):
+              ang = (w.theta2 + w.theta1) / 2.0
+              x = 1.1 * math.cos(math.radians(ang))
+              y = 1.1 * math.sin(math.radians(ang))
+              if p >= 6:
+                  ax.text(x, y, f"{l}\\n{p:.1f}%", ha="center", va="center", fontsize=9)
+
+          plt.title("Languages (public + private)", fontsize=12)
+          plt.tight_layout()
+          fig.savefig("languages.svg", format="svg", bbox_inches='tight')
+          EOF
 
       - name: Commit & push
         env:
@@ -41,5 +112,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add languages.svg
           git commit -m "chore(langs): update languages.svg" || echo "no changes"
-          git remote set-url origin https://${{ github.actor }}:${GH_TOKEN}@github.com/${{ github.repository }}.git
-          git push origin HEAD:${{ github.ref_name }}
+          git push
