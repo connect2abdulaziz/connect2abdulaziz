@@ -1,7 +1,7 @@
 name: Languages Graph
 on:
   schedule:
-    - cron: "17 4 * * *"   # daily
+    - cron: "17 4 * * *"   # daily at 04:17 UTC
   workflow_dispatch:
 
 permissions:
@@ -20,15 +20,14 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install requests matplotlib
+        run: pip install requests
 
-      - name: Generate languages.svg
+      - name: Generate languages.svg (responsive dark/light bar chart)
         env:
-          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}   # PAT: public_repo or repo (to include private)
         run: |
           python <<'EOF'
-          import os, sys, requests, math
-          import matplotlib.pyplot as plt
+          import os, sys, math, json, requests
 
           TOKEN = os.environ.get("GH_TOKEN")
           if not TOKEN:
@@ -40,6 +39,7 @@ jobs:
           lang_sizes = {}
           after = None
 
+          # Collect language byte sizes across your repos
           while True:
               q = {
                   "query": """
@@ -74,9 +74,10 @@ jobs:
 
           if not lang_sizes:
               with open("languages.svg", "w") as f:
-                  f.write("<svg xmlns='http://www.w3.org/2000/svg' width='600' height='60'><text x='10' y='35' font-family='sans-serif' font-size='16'>No language data yet</text></svg>")
+                  f.write("<svg xmlns='http://www.w3.org/2000/svg' width='640' height='60'><text x='10' y='35' font-family='system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif' font-size='14'>No language data yet</text></svg>")
               sys.exit(0)
 
+          # Compute percentages and aggregate small ones into Other
           items = sorted(lang_sizes.items(), key=lambda x: x[1], reverse=True)
           total = sum(v for _, v in items)
           percent = [(k, v/total*100.0) for k, v in items]
@@ -84,24 +85,79 @@ jobs:
           other = sum(p for _, p in percent if p < 3.0)
           if other > 0:
               major.append(("Other", other))
-          labels = [k for k, _ in major]
-          sizes = [p for _, p in major]
 
-          fig = plt.figure(figsize=(8, 5), dpi=160)
-          ax = fig.add_subplot(111)
-          wedges, texts = ax.pie(sizes, startangle=180, wedgeprops=dict(width=0.45))
-          ax.axis('equal')
+          # Keep top 8 slices max
+          major = major[:8]
 
-          for w, l, p in zip(wedges, labels, sizes):
-              ang = (w.theta2 + w.theta1) / 2.0
-              x = 1.1 * math.cos(math.radians(ang))
-              y = 1.1 * math.sin(math.radians(ang))
-              if p >= 6:
-                  ax.text(x, y, f"{l}\\n{p:.1f}%", ha="center", va="center", fontsize=9)
+          # --- SVG layout ---
+          W = 860
+          LEFT = 170
+          RIGHT = 36
+          TOP = 52
+          BOTTOM = 48
+          BAR_H = 26
+          GAP = 12
+          N = len(major)
+          H = TOP + BOTTOM + N * BAR_H + (N-1) * GAP
 
-          plt.title("Languages (public + private)", fontsize=12)
-          plt.tight_layout()
-          fig.savefig("languages.svg", format="svg", bbox_inches='tight')
+          # Build bars
+          def esc(s):
+              return (s.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;'))
+
+          ticks = [0,20,40,60,80,100]
+          svg = []
+          svg.append(f"<svg xmlns='http://www.w3.org/2000/svg' width='{W}' height='{H}' viewBox='0 0 {W} {H}'>")
+          svg.append("<style>
+" \
+                     ":root{--bg:#ffffff;--fg:#1f2328;--muted:#66707a;--bar:#0b5fff;--grid:#e6e8eb;}
+" \
+                     "@media (prefers-color-scheme: dark){:root{--bg:#0d1117;--fg:#c9d1d9;--muted:#8b949e;--bar:#58a6ff;--grid:#30363d;}}
+" \
+                     "text{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif;dominant-baseline:middle} 
+" \
+                     ".title{font-weight:600;dominant-baseline:central} .small{font-size:12px;fill:var(--muted)} .label{font-size:13px;fill:var(--fg)} .value{font-size:12px;fill:var(--fg)}
+" \
+                     "</style>")
+
+          # Background
+          svg.append(f"<rect x='0' y='0' width='{W}' height='{H}' rx='14' ry='14' fill='var(--bg)' />")
+
+          # Title
+          svg.append(f"<text x='{LEFT}' y='{TOP-24}' class='title' font-size='16' fill='var(--fg)'>Languages (public + private)</text>")
+
+          # Grid + tick labels
+          chart_left = LEFT
+          chart_right = W - RIGHT
+          chart_top = TOP
+          chart_bottom = H - BOTTOM
+          chart_w = chart_right - chart_left
+          for t in ticks:
+              x = chart_left + chart_w * t/100.0
+              svg.append(f"<line x1='{x:.2f}' y1='{chart_top}' x2='{x:.2f}' y2='{chart_bottom}' stroke='var(--grid)' stroke-width='1' opacity='0.5' />")
+              svg.append(f"<text x='{x:.2f}' y='{chart_bottom+18}' class='small' text-anchor='middle'>{t}%</text>")
+
+          # Bars & labels
+          for i, (name, p) in enumerate(major):
+              y = chart_top + i * (BAR_H + GAP)
+              w = chart_w * (p/100.0)
+              # Language label on the left
+              svg.append(f"<text x='{LEFT-12}' y='{y + BAR_H/2}' class='label' text-anchor='end'>{esc(name)}</text>")
+              # Bar
+              svg.append(f"<rect x='{chart_left}' y='{y}' width='{w:.2f}' height='{BAR_H}' rx='6' ry='6' fill='var(--bar)' />")
+              # Value label
+              if w < 46:
+                  tx = chart_left + w + 6
+                  anchor = 'start'
+              else:
+                  tx = chart_left + w - 6
+                  anchor = 'end'
+              svg.append(f"<text x='{tx:.2f}' y='{y + BAR_H/2}' class='value' text-anchor='{anchor}'>{p:.1f}%</text>")
+
+          # Footer note
+          svg.append(f"<text x='{W-RIGHT}' y='{H-20}' class='small' text-anchor='end'>Aggregated from all accessible repositories</text>")
+
+          svg.append("</svg>")
+          open("languages.svg","w").write("".join(svg))
           EOF
 
       - name: Commit & push
