@@ -1,171 +1,301 @@
-name: Languages Graph
+name: Languages Graph Generator
 on:
   schedule:
-    - cron: "17 4 * * *"   # daily at 04:17 UTC
+    - cron: "17 4 * * *"   # Daily at 04:17 UTC
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  generate-languages-graph:
     runs-on: ubuntu-latest
+    name: Generate Programming Languages Chart
+    
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Setup Python Environment
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
-      - name: Install deps
+      - name: Install Dependencies
         run: pip install requests
 
-      - name: Generate languages.svg (responsive dark/light bar chart)
+      - name: Generate Languages SVG Chart
         env:
-          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}   # PAT: public_repo or repo (to include private)
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
-          python <<'EOF'
-          import os, sys, math, json, requests
+          python3 << 'EOF'
+          import os
+          import sys
+          import json
+          import requests
+          from typing import Dict, List, Tuple
 
+          # Configuration
           TOKEN = os.environ.get("GH_TOKEN")
           if not TOKEN:
-              sys.exit("Missing GH_TOKEN")
+              print("Error: Missing GH_TOKEN environment variable")
+              sys.exit(1)
 
-          API = "https://api.github.com/graphql"
+          API_ENDPOINT = "https://api.github.com/graphql"
           HEADERS = {"Authorization": f"Bearer {TOKEN}"}
-          ignored = {"HTML", "CSS", "Jupyter Notebook"}
-          lang_sizes = {}
-          after = None
+          IGNORED_LANGUAGES = {"HTML", "CSS", "Jupyter Notebook", "Dockerfile", "Makefile"}
+          MIN_PERCENTAGE_THRESHOLD = 3.0
+          MAX_LANGUAGES_DISPLAY = 8
 
-          # Collect language byte sizes across your repos
-          while True:
-              q = {
-                  "query": """
-                  query($after: String) {
-                    viewer {
-                      repositories(first: 100, after: $after, affiliations: [OWNER, ORGANIZATION_MEMBER, COLLABORATOR], isFork: false, orderBy: {field: UPDATED_AT, direction: DESC}) {
-                        pageInfo { hasNextPage endCursor }
-                        nodes {
-                          languages(first: 100, orderBy: {field: SIZE, direction: DESC}) {
-                            edges { size node { name } }
-                          }
+          def fetch_language_data() -> Dict[str, int]:
+              """Fetch language data from all accessible repositories."""
+              lang_sizes = {}
+              after = None
+              
+              query = """
+              query($after: String) {
+                viewer {
+                  repositories(
+                    first: 100, 
+                    after: $after, 
+                    affiliations: [OWNER, ORGANIZATION_MEMBER, COLLABORATOR], 
+                    isFork: false, 
+                    orderBy: {field: UPDATED_AT, direction: DESC}
+                  ) {
+                    pageInfo { 
+                      hasNextPage 
+                      endCursor 
+                    }
+                    nodes {
+                      languages(first: 100, orderBy: {field: SIZE, direction: DESC}) {
+                        edges { 
+                          size 
+                          node { name } 
                         }
                       }
                     }
                   }
-                  """,
-                  "variables": {"after": after}
+                }
               }
-              r = requests.post(API, json=q, headers=HEADERS, timeout=60)
-              r.raise_for_status()
-              data = r.json()
-              repos = data["data"]["viewer"]["repositories"]
-              for repo in repos["nodes"]:
-                  for e in repo["languages"]["edges"]:
-                      name = e["node"]["name"]
-                      if name in ignored:
-                          continue
-                      lang_sizes[name] = lang_sizes.get(name, 0) + int(e["size"])
-              if not repos["pageInfo"]["hasNextPage"]:
-                  break
-              after = repos["pageInfo"]["endCursor"]
+              """
 
-          if not lang_sizes:
-              with open("languages.svg", "w") as f:
-                  f.write("<svg xmlns='http://www.w3.org/2000/svg' width='640' height='60'><text x='10' y='35' font-family='system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif' font-size='14'>No language data yet</text></svg>")
-              sys.exit(0)
+              while True:
+                  try:
+                      response = requests.post(
+                          API_ENDPOINT, 
+                          json={"query": query, "variables": {"after": after}}, 
+                          headers=HEADERS, 
+                          timeout=60
+                      )
+                      response.raise_for_status()
+                      data = response.json()
+                      
+                      if "errors" in data:
+                          print(f"GraphQL errors: {data['errors']}")
+                          sys.exit(1)
+                          
+                      repos = data["data"]["viewer"]["repositories"]
+                      
+                      for repo in repos["nodes"]:
+                          for edge in repo["languages"]["edges"]:
+                              language_name = edge["node"]["name"]
+                              if language_name not in IGNORED_LANGUAGES:
+                                  lang_sizes[language_name] = lang_sizes.get(language_name, 0) + int(edge["size"])
+                      
+                      if not repos["pageInfo"]["hasNextPage"]:
+                          break
+                      after = repos["pageInfo"]["endCursor"]
+                      
+                  except requests.exceptions.RequestException as e:
+                      print(f"Request failed: {e}")
+                      sys.exit(1)
+              
+              return lang_sizes
 
-          # Compute percentages and aggregate small ones into Other
-          items = sorted(lang_sizes.items(), key=lambda x: x[1], reverse=True)
-          total = sum(v for _, v in items)
-          percent = [(k, v/total*100.0) for k, v in items]
-          major = [(k, p) for k, p in percent if p >= 3.0]
-          other = sum(p for _, p in percent if p < 3.0)
-          if other > 0:
-              major.append(("Other", other))
+          def process_language_data(lang_sizes: Dict[str, int]) -> List[Tuple[str, float]]:
+              """Process language data and calculate percentages."""
+              if not lang_sizes:
+                  return []
+              
+              # Sort by size and calculate percentages
+              items = sorted(lang_sizes.items(), key=lambda x: x[1], reverse=True)
+              total_size = sum(size for _, size in items)
+              percentages = [(name, (size / total_size) * 100.0) for name, size in items]
+              
+              # Separate major languages and aggregate small ones
+              major_languages = [(name, pct) for name, pct in percentages if pct >= MIN_PERCENTAGE_THRESHOLD]
+              other_percentage = sum(pct for _, pct in percentages if pct < MIN_PERCENTAGE_THRESHOLD)
+              
+              if other_percentage > 0:
+                  major_languages.append(("Other", other_percentage))
+              
+              return major_languages[:MAX_LANGUAGES_DISPLAY]
 
-          # Keep top 8 slices max
-          major = major[:8]
+          def escape_html(text: str) -> str:
+              """Escape HTML special characters."""
+              return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
-          # --- SVG layout ---
-          W = 860
-          LEFT = 170
-          RIGHT = 36
-          TOP = 52
-          BOTTOM = 48
-          BAR_H = 26
-          GAP = 12
-          N = len(major)
-          H = TOP + BOTTOM + N * BAR_H + (N-1) * GAP
+          def generate_svg(languages: List[Tuple[str, float]]) -> str:
+              """Generate SVG chart for languages."""
+              if not languages:
+                  return """
+                  <svg xmlns='http://www.w3.org/2000/svg' width='640' height='60'>
+                      <rect width='100%' height='100%' fill='#ffffff' rx='8'/>
+                      <text x='20' y='35' font-family='system-ui, sans-serif' font-size='14' fill='#24292f'>
+                          No language data available
+                      </text>
+                  </svg>
+                  """
+              
+              # Chart dimensions
+              WIDTH = 860
+              LEFT_MARGIN = 170
+              RIGHT_MARGIN = 36
+              TOP_MARGIN = 52
+              BOTTOM_MARGIN = 48
+              BAR_HEIGHT = 26
+              BAR_GAP = 12
+              
+              num_languages = len(languages)
+              HEIGHT = TOP_MARGIN + BOTTOM_MARGIN + (num_languages * BAR_HEIGHT) + ((num_languages - 1) * BAR_GAP)
+              
+              # Chart area calculations
+              chart_left = LEFT_MARGIN
+              chart_right = WIDTH - RIGHT_MARGIN
+              chart_top = TOP_MARGIN
+              chart_bottom = HEIGHT - BOTTOM_MARGIN
+              chart_width = chart_right - chart_left
+              
+              # Build SVG
+              svg_parts = []
+              
+              # SVG opening and styles
+              svg_parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">')
+              
+              # CSS styles with proper string formatting
+              styles = """
+              <style>
+                  :root {
+                      --bg: #ffffff;
+                      --fg: #1f2328;
+                      --muted: #66707a;
+                      --bar: #0b5fff;
+                      --grid: #e6e8eb;
+                  }
+                  @media (prefers-color-scheme: dark) {
+                      :root {
+                          --bg: #0d1117;
+                          --fg: #c9d1d9;
+                          --muted: #8b949e;
+                          --bar: #58a6ff;
+                          --grid: #30363d;
+                      }
+                  }
+                  text {
+                      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Helvetica, Arial, sans-serif;
+                      dominant-baseline: middle;
+                  }
+                  .title {
+                      font-weight: 600;
+                      font-size: 16px;
+                      fill: var(--fg);
+                      dominant-baseline: central;
+                  }
+                  .small {
+                      font-size: 12px;
+                      fill: var(--muted);
+                  }
+                  .label {
+                      font-size: 13px;
+                      fill: var(--fg);
+                  }
+                  .value {
+                      font-size: 12px;
+                      fill: var(--fg);
+                  }
+              </style>
+              """
+              svg_parts.append(styles)
+              
+              # Background
+              svg_parts.append(f'<rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" rx="14" ry="14" fill="var(--bg)"/>')
+              
+              # Title
+              svg_parts.append(f'<text x="{LEFT_MARGIN}" y="{TOP_MARGIN - 24}" class="title">Programming Languages Distribution</text>')
+              
+              # Grid lines and tick labels
+              tick_values = [0, 20, 40, 60, 80, 100]
+              for tick in tick_values:
+                  x_pos = chart_left + (chart_width * tick / 100.0)
+                  svg_parts.append(f'<line x1="{x_pos:.1f}" y1="{chart_top}" x2="{x_pos:.1f}" y2="{chart_bottom}" stroke="var(--grid)" stroke-width="1" opacity="0.5"/>')
+                  svg_parts.append(f'<text x="{x_pos:.1f}" y="{chart_bottom + 18}" class="small" text-anchor="middle">{tick}%</text>')
+              
+              # Language bars
+              for i, (language_name, percentage) in enumerate(languages):
+                  y_pos = chart_top + (i * (BAR_HEIGHT + BAR_GAP))
+                  bar_width = chart_width * (percentage / 100.0)
+                  
+                  # Language label
+                  svg_parts.append(f'<text x="{LEFT_MARGIN - 12}" y="{y_pos + BAR_HEIGHT/2}" class="label" text-anchor="end">{escape_html(language_name)}</text>')
+                  
+                  # Bar
+                  svg_parts.append(f'<rect x="{chart_left}" y="{y_pos}" width="{bar_width:.1f}" height="{BAR_HEIGHT}" rx="6" ry="6" fill="var(--bar)"/>')
+                  
+                  # Percentage label
+                  if bar_width < 46:
+                      text_x = chart_left + bar_width + 6
+                      text_anchor = "start"
+                  else:
+                      text_x = chart_left + bar_width - 6
+                      text_anchor = "end"
+                  
+                  svg_parts.append(f'<text x="{text_x:.1f}" y="{y_pos + BAR_HEIGHT/2}" class="value" text-anchor="{text_anchor}">{percentage:.1f}%</text>')
+              
+              # Footer
+              svg_parts.append(f'<text x="{WIDTH - RIGHT_MARGIN}" y="{HEIGHT - 20}" class="small" text-anchor="end">Generated from all accessible repositories</text>')
+              
+              svg_parts.append('</svg>')
+              return ''.join(svg_parts)
 
-          # Build bars
-          def esc(s):
-              return (s.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;'))
-
-          ticks = [0,20,40,60,80,100]
-          svg = []
-          svg.append(f"<svg xmlns='http://www.w3.org/2000/svg' width='{W}' height='{H}' viewBox='0 0 {W} {H}'>")
-          svg.append("<style>
-" \
-                     ":root{--bg:#ffffff;--fg:#1f2328;--muted:#66707a;--bar:#0b5fff;--grid:#e6e8eb;}
-" \
-                     "@media (prefers-color-scheme: dark){:root{--bg:#0d1117;--fg:#c9d1d9;--muted:#8b949e;--bar:#58a6ff;--grid:#30363d;}}
-" \
-                     "text{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif;dominant-baseline:middle} 
-" \
-                     ".title{font-weight:600;dominant-baseline:central} .small{font-size:12px;fill:var(--muted)} .label{font-size:13px;fill:var(--fg)} .value{font-size:12px;fill:var(--fg)}
-" \
-                     "</style>")
-
-          # Background
-          svg.append(f"<rect x='0' y='0' width='{W}' height='{H}' rx='14' ry='14' fill='var(--bg)' />")
-
-          # Title
-          svg.append(f"<text x='{LEFT}' y='{TOP-24}' class='title' font-size='16' fill='var(--fg)'>Languages (public + private)</text>")
-
-          # Grid + tick labels
-          chart_left = LEFT
-          chart_right = W - RIGHT
-          chart_top = TOP
-          chart_bottom = H - BOTTOM
-          chart_w = chart_right - chart_left
-          for t in ticks:
-              x = chart_left + chart_w * t/100.0
-              svg.append(f"<line x1='{x:.2f}' y1='{chart_top}' x2='{x:.2f}' y2='{chart_bottom}' stroke='var(--grid)' stroke-width='1' opacity='0.5' />")
-              svg.append(f"<text x='{x:.2f}' y='{chart_bottom+18}' class='small' text-anchor='middle'>{t}%</text>")
-
-          # Bars & labels
-          for i, (name, p) in enumerate(major):
-              y = chart_top + i * (BAR_H + GAP)
-              w = chart_w * (p/100.0)
-              # Language label on the left
-              svg.append(f"<text x='{LEFT-12}' y='{y + BAR_H/2}' class='label' text-anchor='end'>{esc(name)}</text>")
-              # Bar
-              svg.append(f"<rect x='{chart_left}' y='{y}' width='{w:.2f}' height='{BAR_H}' rx='6' ry='6' fill='var(--bar)' />")
-              # Value label
-              if w < 46:
-                  tx = chart_left + w + 6
-                  anchor = 'start'
+          def main():
+              """Main execution function."""
+              print("Fetching language data from GitHub repositories...")
+              language_data = fetch_language_data()
+              
+              if not language_data:
+                  print("No language data found. Creating placeholder SVG.")
+                  svg_content = generate_svg([])
               else:
-                  tx = chart_left + w - 6
-                  anchor = 'end'
-              svg.append(f"<text x='{tx:.2f}' y='{y + BAR_H/2}' class='value' text-anchor='{anchor}'>{p:.1f}%</text>")
+                  print(f"Found {len(language_data)} languages. Processing data...")
+                  processed_languages = process_language_data(language_data)
+                  print(f"Generating chart for {len(processed_languages)} languages.")
+                  svg_content = generate_svg(processed_languages)
+              
+              # Write SVG file
+              with open("languages.svg", "w", encoding="utf-8") as f:
+                  f.write(svg_content)
+              
+              print("Successfully generated languages.svg")
 
-          # Footer note
-          svg.append(f"<text x='{W-RIGHT}' y='{H-20}' class='small' text-anchor='end'>Aggregated from all accessible repositories</text>")
-
-          svg.append("</svg>")
-          open("languages.svg","w").write("".join(svg))
+          if __name__ == "__main__":
+              main()
           EOF
 
-      - name: Commit & push
+      - name: Commit and Push Changes
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Add and commit changes
           git add languages.svg
-          git commit -m "chore(langs): update languages.svg" || echo "no changes"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update programming languages chart"
+            git push
+            echo "Successfully updated languages.svg"
+          fi
