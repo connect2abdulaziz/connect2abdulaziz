@@ -70,7 +70,7 @@
   <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=connect2abdulaziz&theme=tokyonight&hide_border=true&background=0D1117&stroke=4158D0&ring=4158D0&fire=C850C0&currStreakLabel=C850C0&border_radius=10" />
 </p>
 
-<p align="center">
+<p align="left">
   <img src="./languages.svg" alt="Languages (public + private repos)" />
 </p>
 
