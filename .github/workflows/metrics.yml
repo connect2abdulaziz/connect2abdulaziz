@@ -1,7 +1,7 @@
 name: Metrics
 on:
   schedule:
-    - cron: "22 3 * * *"    # daily
+    - cron: "0 6 * * *"    # daily at 6 AM UTC
   workflow_dispatch:
   push:
     branches: [main]
@@ -10,7 +10,7 @@ on:
       - .github/workflows/metrics.yml
 
 permissions:
-  contents: write   # allow committing metrics.svg
+  contents: write
 
 jobs:
   github-metrics:
@@ -18,32 +18,43 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Generate & commit metrics.svg
+        
+      - name: Generate metrics (light theme)
         uses: lowlighter/metrics@latest
         with:
-          # PAT for reading your activity (public_repo or repo if you want private stats)
           token: ${{ secrets.METRICS_TOKEN }}
-
-          # This lets the action commit the file to your repo (no manual git needed)
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           committer_branch: main
-          filename: metrics.svg
-
+          filename: metrics-light.svg
           user: connect2abdulaziz
           template: classic
-          base: header, activity, community, repositories
+          base: header, activity, community, repositories, metadata
           config_timezone: Asia/Karachi
-
-          # plugins (tweak as you like)
-          plugin_followup: yes
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-          plugin_languages: yes
-          plugin_languages_ignored: html, css, jupyter notebook
-          plugin_achievements: yes
-          plugin_achievements_threshold: C
-          plugin_lines: yes
-          plugin_repositories: yes
-          plugin_topics: yes
-          plugin_topics_limit: 12
+          config_display: large
+          config_padding: 6, 12
+          # Light theme colors
+          config_base_color: "#ffffff"
+          config_text_color: "#24292f"
+          config_title_color: "#0969da"
+          config_icon_color: "#656d76"
+          # Only essential stats - no extra plugins
+          
+      - name: Generate metrics (dark theme)
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_branch: main
+          filename: metrics-dark.svg
+          user: connect2abdulaziz
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Karachi
+          config_display: large
+          config_padding: 6, 12
+          # Dark theme colors matching your current theme
+          config_base_color: "#0d1117"
+          config_text_color: "#e6edf3"
+          config_title_color: "#4158d0"
+          config_icon_color: "#7d8590"
+          # Only essential stats - no extra plugins
