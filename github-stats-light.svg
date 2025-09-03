@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320">
+    <defs>
+      <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      </linearGradient>
+      <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#4158d0;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#c850c0;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#ffcc70;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="400" height="320" fill="url(#bg-gradient)" rx="12"/>
+    <rect width="400" height="3" fill="url(#accent-gradient)" rx="1.5"/>
+    <rect x="1" y="1" width="398" height="318" fill="none" stroke="#d0d7de" stroke-width="1" rx="12"/>
+    
+    <!-- Header -->
+    <circle cx="40" cy="40" r="20" fill="url(#accent-gradient)"/>
+    <text x="40" y="46" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">AA</text>
+    <text x="75" y="38" fill="#24292f" font-family="Arial, sans-serif" font-size="18" font-weight="600">Abdul Aziz</text>
+    <text x="75" y="54" fill="#656d76" font-family="Arial, sans-serif" font-size="12">GitHub Developer • 2 years</text>
+    
+    <!-- Ranking Badge -->
+    <rect x="290" y="25" width="80" height="25" fill="#0969da" rx="12"/>
+    <text x="330" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="600">A Rank</text>
+    <text x="330" y="52" text-anchor="middle" fill="#656d76" font-family="Arial, sans-serif" font-size="9">Top 10%</text>
+    
+    <!-- Stats Grid -->
+    <g transform="translate(25, 80)">
+      <!-- Row 1 -->
+      <g>
+        <text x="0" y="20" fill="#0969da" font-family="Arial, sans-serif" font-size="24" font-weight="700">575</text>
+        <text x="0" y="35" fill="#656d76" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Total Commits</text>
+      </g>
+      <g transform="translate(175, 0)">
+        <text x="0" y="20" fill="#0969da" font-family="Arial, sans-serif" font-size="24" font-weight="700">10</text>
+        <text x="0" y="35" fill="#656d76" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Stars Earned</text>
+      </g>
+      
+      <!-- Row 2 -->
+      <g transform="translate(0, 50)">
+        <text x="0" y="20" fill="#0969da" font-family="Arial, sans-serif" font-size="24" font-weight="700">93</text>
+        <text x="0" y="35" fill="#656d76" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Pull Requests</text>
+      </g>
+      <g transform="translate(175, 50)">
+        <text x="0" y="20" fill="#0969da" font-family="Arial, sans-serif" font-size="24" font-weight="700">48</text>
+        <text x="0" y="35" fill="#656d76" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Repositories</text>
+      </g>
+      
+      <!-- Row 3 -->
+      <g transform="translate(0, 100)">
+        <text x="0" y="20" fill="#0969da" font-family="Arial, sans-serif" font-size="24" font-weight="700">80</text>
+        <text x="0" y="35" fill="#656d76" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Followers</text>
+      </g>
+      <g transform="translate(175, 100)">
+        <text x="0" y="20" fill="#0969da" font-family="Arial, sans-serif" font-size="24" font-weight="700">3</text>
+        <text x="0" y="35" fill="#656d76" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Total Forks</text>
+      </g>
+    </g>
+    
+    <!-- Separator -->
+    <line x1="25" y1="235" x2="375" y2="235" stroke="#d0d7de" stroke-width="1"/>
+    
+    <!-- Contribution Stats -->
+    <g transform="translate(25, 255)">
+      <text x="0" y="15" fill="#656d76" font-family="Arial, sans-serif" font-size="11">Total Contributions</text>
+      <text x="350" y="15" text-anchor="end" fill="#0969da" font-family="Arial, sans-serif" font-size="13" font-weight="600">2048</text>
+      
+      <text x="0" y="35" fill="#656d76" font-family="Arial, sans-serif" font-size="11">Current Streak</text>
+      <text x="350" y="35" text-anchor="end" fill="#8250df" font-family="Arial, sans-serif" font-size="13" font-weight="600">16 days</text>
+      
+      <text x="0" y="55" fill="#656d76" font-family="Arial, sans-serif" font-size="11">Longest Streak</text>
+      <text x="350" y="55" text-anchor="end" fill="#0969da" font-family="Arial, sans-serif" font-size="13" font-weight="600">86 days</text>
+    </g>
+    
+    <!-- Footer -->
+    <text x="200" y="310" text-anchor="middle" fill="#656d76" font-family="Arial, sans-serif" font-size="8">Updated 9/3/2025</text>
+  </svg>
