@@ -69,7 +69,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="github-stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="github-stats-light.svg">
-    <img src="github-stats-light.svg" alt="GitHub Stats" width="400">
+    <img src="github-stats-light.svg" alt="GitHub Stats" width="100%" style="max-width: 100%; margin: 0 10px;">
   </picture>
 </p>
 
