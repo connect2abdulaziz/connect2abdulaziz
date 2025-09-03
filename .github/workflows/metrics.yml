@@ -183,71 +183,69 @@ jobs:
               </defs>
               
               <!-- Background -->
-              <rect width="400" height="320" fill="url(#bg-gradient)" rx="12"/>
-              <rect width="400" height="3" fill="url(#accent-gradient)" rx="1.5"/>
-              <rect x="1" y="1" width="398" height="318" fill="none" stroke="${borderColor}" stroke-width="1" rx="12"/>
+              <rect width="100%" height="320" fill="url(#bg-gradient)" rx="12"/>
+              <rect width="100%" height="3" fill="url(#accent-gradient)" rx="1.5"/>
+              <rect x="1" y="1" width="798" height="318" fill="none" stroke="${borderColor}" stroke-width="1" rx="12"/>
               
               <!-- Header -->
-              <circle cx="40" cy="40" r="20" fill="url(#accent-gradient)"/>
-              <text x="40" y="46" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">AA</text>
-              <text x="75" y="38" fill="${textColor}" font-family="Arial, sans-serif" font-size="18" font-weight="600">${stats.name}</text>
-              <text x="75" y="54" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12">GitHub Developer • ${stats.memberDuration}</text>
+              <circle cx="50" cy="50" r="25" fill="url(#accent-gradient)"/>
+              <text x="50" y="57" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">AA</text>
+              <text x="90" y="45" fill="${textColor}" font-family="Arial, sans-serif" font-size="22" font-weight="600">${stats.name}</text>
+              <text x="90" y="65" fill="${iconColor}" font-family="Arial, sans-serif" font-size="14">GitHub Developer • ${stats.memberDuration}</text>
               
               <!-- Ranking Badge -->
-              <rect x="290" y="25" width="80" height="25" fill="${titleColor}" rx="12"/>
-              <text x="330" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="600">${stats.ranking.level} Rank</text>
-              <text x="330" y="52" text-anchor="middle" fill="${iconColor}" font-family="Arial, sans-serif" font-size="9">${stats.ranking.rank}</text>
+              <rect x="680" y="30" width="100" height="30" fill="${titleColor}" rx="15"/>
+              <text x="730" y="48" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="600">${stats.ranking.level} Rank</text>
+              <text x="730" y="62" text-anchor="middle" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10">${stats.ranking.rank}</text>
               
               <!-- Stats Grid -->
-              <g transform="translate(25, 80)">
+              <g transform="translate(50, 100)">
                 <!-- Row 1 -->
                 <g>
-                  <text x="0" y="20" fill="${titleColor}" font-family="Arial, sans-serif" font-size="24" font-weight="700">${stats.totalCommits}</text>
-                  <text x="0" y="35" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Total Commits</text>
+                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.totalCommits}</text>
+                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Total Commits</text>
                 </g>
-                <g transform="translate(175, 0)">
-                  <text x="0" y="20" fill="${titleColor}" font-family="Arial, sans-serif" font-size="24" font-weight="700">${stats.totalStars}</text>
-                  <text x="0" y="35" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Stars Earned</text>
+                <g transform="translate(250, 0)">
+                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.totalStars}</text>
+                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Stars Earned</text>
+                </g>
+                <g transform="translate(500, 0)">
+                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.totalPRs}</text>
+                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Pull Requests</text>
                 </g>
                 
                 <!-- Row 2 -->
-                <g transform="translate(0, 50)">
-                  <text x="0" y="20" fill="${titleColor}" font-family="Arial, sans-serif" font-size="24" font-weight="700">${stats.totalPRs}</text>
-                  <text x="0" y="35" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Pull Requests</text>
+                <g transform="translate(0, 65)">
+                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.publicRepos}</text>
+                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Repositories</text>
                 </g>
-                <g transform="translate(175, 50)">
-                  <text x="0" y="20" fill="${titleColor}" font-family="Arial, sans-serif" font-size="24" font-weight="700">${stats.publicRepos}</text>
-                  <text x="0" y="35" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Repositories</text>
+                <g transform="translate(250, 65)">
+                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.followers}</text>
+                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Followers</text>
                 </g>
-                
-                <!-- Row 3 -->
-                <g transform="translate(0, 100)">
-                  <text x="0" y="20" fill="${titleColor}" font-family="Arial, sans-serif" font-size="24" font-weight="700">${stats.followers}</text>
-                  <text x="0" y="35" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Followers</text>
-                </g>
-                <g transform="translate(175, 100)">
-                  <text x="0" y="20" fill="${titleColor}" font-family="Arial, sans-serif" font-size="24" font-weight="700">${stats.totalForks}</text>
-                  <text x="0" y="35" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10" text-transform="uppercase">Total Forks</text>
+                <g transform="translate(500, 65)">
+                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.totalForks}</text>
+                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Total Forks</text>
                 </g>
               </g>
               
               <!-- Separator -->
-              <line x1="25" y1="235" x2="375" y2="235" stroke="${borderColor}" stroke-width="1"/>
+              <line x1="50" y1="250" x2="750" y2="250" stroke="${borderColor}" stroke-width="1"/>
               
               <!-- Contribution Stats -->
-              <g transform="translate(25, 255)">
-                <text x="0" y="15" fill="${iconColor}" font-family="Arial, sans-serif" font-size="11">Total Contributions</text>
-                <text x="350" y="15" text-anchor="end" fill="${titleColor}" font-family="Arial, sans-serif" font-size="13" font-weight="600">${stats.totalContributions}</text>
+              <g transform="translate(50, 270)">
+                <text x="0" y="18" fill="${iconColor}" font-family="Arial, sans-serif" font-size="13">Total Contributions</text>
+                <text x="700" y="18" text-anchor="end" fill="${titleColor}" font-family="Arial, sans-serif" font-size="15" font-weight="600">${stats.totalContributions}</text>
                 
-                <text x="0" y="35" fill="${iconColor}" font-family="Arial, sans-serif" font-size="11">Current Streak</text>
-                <text x="350" y="35" text-anchor="end" fill="${accentColor}" font-family="Arial, sans-serif" font-size="13" font-weight="600">${stats.currentStreak} days</text>
+                <text x="250" y="18" fill="${iconColor}" font-family="Arial, sans-serif" font-size="13">Current Streak</text>
+                <text x="400" y="18" text-anchor="start" fill="${accentColor}" font-family="Arial, sans-serif" font-size="15" font-weight="600">${stats.currentStreak} days</text>
                 
-                <text x="0" y="55" fill="${iconColor}" font-family="Arial, sans-serif" font-size="11">Longest Streak</text>
-                <text x="350" y="55" text-anchor="end" fill="${titleColor}" font-family="Arial, sans-serif" font-size="13" font-weight="600">${stats.longestStreak} days</text>
+                <text x="450" y="18" fill="${iconColor}" font-family="Arial, sans-serif" font-size="13">Longest Streak</text>
+                <text x="580" y="18" text-anchor="start" fill="${titleColor}" font-family="Arial, sans-serif" font-size="15" font-weight="600">${stats.longestStreak} days</text>
               </g>
               
               <!-- Footer -->
-              <text x="200" y="310" text-anchor="middle" fill="${iconColor}" font-family="Arial, sans-serif" font-size="8">Updated ${new Date().toLocaleDateString()}</text>
+              <text x="400" y="305" text-anchor="middle" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10">Updated ${new Date().toLocaleDateString()}</text>
             </svg>`;
           }
           
