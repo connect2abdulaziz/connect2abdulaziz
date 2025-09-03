@@ -1,7 +1,7 @@
-name: Generate Dynamic Stats Card
+name: Generate GitHub Stats
 on:
   schedule:
-    - cron: "0 6 * * *"    # daily at 6 AM UTC
+    - cron: "0 6 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -23,12 +23,12 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Generate Stats Card
+      - name: Generate Professional Stats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: connect2abdulaziz
         run: |
-          # Create the stats generation script
+          # Create the professional stats generation script
           cat << 'EOF' > generate-stats.js
           const fs = require('fs');
           const https = require('https');
@@ -36,7 +36,6 @@ jobs:
           const USERNAME = process.env.USERNAME;
           const TOKEN = process.env.GITHUB_TOKEN;
           
-          // Function to make GitHub API requests
           function makeRequest(url) {
             return new Promise((resolve, reject) => {
               const options = {
@@ -60,89 +59,46 @@ jobs:
             });
           }
           
-          // Function to calculate GitHub ranking based on stats
-          function calculateRanking(stats) {
-            const { totalStars, totalCommits, totalPRs, totalIssues, followers, publicRepos } = stats;
-            
-            // Simple ranking algorithm (you can adjust weights)
+          function calculateRank(totalStars, totalCommits, totalPRs, followers, publicRepos) {
             const score = (totalStars * 10) + (totalCommits * 0.5) + (totalPRs * 5) + (followers * 2) + (publicRepos * 1);
             
-            if (score > 10000) return { level: 'S+', percentile: '99.9th', rank: 'Top 0.1%' };
-            if (score > 5000) return { level: 'S', percentile: '99th', rank: 'Top 1%' };
-            if (score > 2000) return { level: 'A+', percentile: '95th', rank: 'Top 5%' };
-            if (score > 1000) return { level: 'A', percentile: '90th', rank: 'Top 10%' };
-            if (score > 500) return { level: 'B+', percentile: '80th', rank: 'Top 20%' };
-            if (score > 200) return { level: 'B', percentile: '70th', rank: 'Top 30%' };
-            return { level: 'C+', percentile: '50th', rank: 'Top 50%' };
+            if (score > 10000) return 'S';
+            if (score > 5000) return 'A+';
+            if (score > 2000) return 'A';
+            if (score > 1000) return 'B+';
+            if (score > 500) return 'B';
+            return 'C+';
           }
           
           async function generateStats() {
             try {
-              console.log('Fetching user data...');
               const user = await makeRequest(`https://api.github.com/users/${USERNAME}`);
-              
-              console.log('Fetching repositories...');
               const repos = await makeRequest(`https://api.github.com/users/${USERNAME}/repos?per_page=100&sort=updated`);
               
-              console.log('Fetching user events...');
-              const events = await makeRequest(`https://api.github.com/users/${USERNAME}/events/public?per_page=100`);
+              const totalStars = Array.isArray(repos) ? repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0) : 11;
+              const totalForks = Array.isArray(repos) ? repos.reduce((sum, repo) => sum + (repo.forks_count || 0), 0) : 3;
               
-              // Calculate stats
-              const totalStars = Array.isArray(repos) ? repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0) : 0;
-              const totalForks = Array.isArray(repos) ? repos.reduce((sum, repo) => sum + (repo.forks_count || 0), 0) : 0;
-              const totalIssues = Array.isArray(repos) ? repos.reduce((sum, repo) => sum + (repo.open_issues_count || 0), 0) : 0;
-              
-              // Count commits from events (approximate)
-              const commitEvents = Array.isArray(events) ? events.filter(event => event.type === 'PushEvent') : [];
-              const totalCommits = commitEvents.reduce((sum, event) => {
-                return sum + (event.payload && event.payload.commits ? event.payload.commits.length : 0);
-              }, 0);
-              
-              // Count PRs from events
-              const prEvents = Array.isArray(events) ? events.filter(event => event.type === 'PullRequestEvent') : [];
-              
-              const stats = {
-                name: user.name || USERNAME,
-                login: user.login,
-                followers: user.followers || 0,
-                following: user.following || 0,
-                publicRepos: user.public_repos || 0,
+              return {
+                name: user.name || 'Abdul Aziz',
+                followers: user.followers || 79,
+                publicRepos: user.public_repos || 32,
                 totalStars: totalStars,
                 totalForks: totalForks,
-                totalCommits: Math.max(totalCommits, 575), // Use your known commit count as minimum
-                totalPRs: Math.max(prEvents.length, 93), // Use your known PR count as minimum
-                totalIssues: Math.max(totalIssues, 1),
-                createdAt: user.created_at,
-                updatedAt: new Date().toISOString()
+                totalCommits: 575,
+                totalPRs: 93,
+                totalIssues: 1,
+                currentStreak: 16,
+                longestStreak: 86,
+                totalContributions: 2048,
+                memberSince: new Date(user.created_at).getFullYear() || 2016,
+                rank: calculateRank(totalStars, 575, 93, user.followers || 79, user.public_repos || 32)
               };
               
-              // Calculate ranking
-              const ranking = calculateRanking(stats);
-              stats.ranking = ranking;
-              
-              // Calculate member duration
-              const memberSince = new Date(user.created_at);
-              const now = new Date();
-              const yearsDiff = now.getFullYear() - memberSince.getFullYear();
-              const memberDuration = yearsDiff > 0 ? `${yearsDiff} years` : `${Math.floor((now - memberSince) / (30 * 24 * 60 * 60 * 1000))} months`;
-              stats.memberDuration = memberDuration;
-              
-              // Estimate current streak (simplified)
-              stats.currentStreak = 16; // You can enhance this with more complex logic
-              stats.longestStreak = 86;
-              stats.totalContributions = 2048; // This would need contributions API
-              
-              console.log('Generated stats:', stats);
-              return stats;
-              
             } catch (error) {
-              console.error('Error generating stats:', error);
-              // Return fallback stats
+              console.log('Using fallback data');
               return {
                 name: 'Abdul Aziz',
-                login: 'connect2abdulaziz',
                 followers: 79,
-                following: 275,
                 publicRepos: 32,
                 totalStars: 11,
                 totalForks: 3,
@@ -152,127 +108,84 @@ jobs:
                 currentStreak: 16,
                 longestStreak: 86,
                 totalContributions: 2048,
-                memberDuration: '9 years',
-                ranking: { level: 'A', percentile: '90th', rank: 'Top 10%' },
-                updatedAt: new Date().toISOString()
+                memberSince: 2016,
+                rank: 'A'
               };
             }
           }
           
-          // Generate SVG template
-          function generateSVG(stats, theme = 'dark') {
-            const isDark = theme === 'dark';
-            const bgColor = isDark ? '#0d1117' : '#ffffff';
-            const textColor = isDark ? '#e6edf3' : '#24292f';
-            const titleColor = isDark ? '#4158d0' : '#0969da';
-            const iconColor = isDark ? '#7d8590' : '#656d76';
-            const borderColor = isDark ? '#30363d' : '#d0d7de';
-            const accentColor = isDark ? '#c850c0' : '#8250df';
+          function generateProfessionalSVG(stats, isDark = false) {
+            const bg = isDark ? '#0d1117' : '#ffffff';
+            const text = isDark ? '#e6edf3' : '#24292f';
+            const border = isDark ? '#21262d' : '#d0d7de';
+            const accent = isDark ? '#58a6ff' : '#0969da';
+            const secondary = isDark ? '#8b949e' : '#656d76';
             
-            return `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320">
-              <defs>
-                <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:${bgColor};stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:${isDark ? '#161b22' : '#f8f9fa'};stop-opacity:1" />
-                </linearGradient>
-                <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style="stop-color:#4158d0;stop-opacity:1" />
-                  <stop offset="50%" style="stop-color:#c850c0;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#ffcc70;stop-opacity:1" />
-                </linearGradient>
-              </defs>
-              
-              <!-- Background -->
-              <rect width="100%" height="320" fill="url(#bg-gradient)" rx="12"/>
-              <rect width="100%" height="3" fill="url(#accent-gradient)" rx="1.5"/>
-              <rect x="1" y="1" width="798" height="318" fill="none" stroke="${borderColor}" stroke-width="1" rx="12"/>
+            return `<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="494" height="194" rx="4.5" fill="${bg}" stroke="${border}"/>
               
               <!-- Header -->
-              <circle cx="50" cy="50" r="25" fill="url(#accent-gradient)"/>
-              <text x="50" y="57" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">AA</text>
-              <text x="90" y="45" fill="${textColor}" font-family="Arial, sans-serif" font-size="22" font-weight="600">${stats.name}</text>
-              <text x="90" y="65" fill="${iconColor}" font-family="Arial, sans-serif" font-size="14">GitHub Developer • ${stats.memberDuration}</text>
-              
-              <!-- Ranking Badge -->
-              <rect x="680" y="30" width="100" height="30" fill="${titleColor}" rx="15"/>
-              <text x="730" y="48" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="600">${stats.ranking.level} Rank</text>
-              <text x="730" y="62" text-anchor="middle" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10">${stats.ranking.rank}</text>
+              <text x="25" y="35" fill="${text}" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="600">${stats.name}'s GitHub Stats</text>
+              <rect x="400" y="20" width="70" height="20" rx="10" fill="${accent}"/>
+              <text x="435" y="32" fill="white" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Rank ${stats.rank}</text>
               
               <!-- Stats Grid -->
-              <g transform="translate(50, 100)">
+              <g fill="${text}" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
                 <!-- Row 1 -->
-                <g>
-                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.totalCommits}</text>
-                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Total Commits</text>
-                </g>
-                <g transform="translate(250, 0)">
-                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.totalStars}</text>
-                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Stars Earned</text>
-                </g>
-                <g transform="translate(500, 0)">
-                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.totalPRs}</text>
-                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Pull Requests</text>
-                </g>
+                <text x="25" y="75" font-size="14" font-weight="600">${stats.totalStars}</text>
+                <text x="25" y="90" font-size="12" fill="${secondary}">Total Stars Earned</text>
+                
+                <text x="175" y="75" font-size="14" font-weight="600">${stats.totalCommits}</text>
+                <text x="175" y="90" font-size="12" fill="${secondary}">Total Commits (2025)</text>
+                
+                <text x="350" y="75" font-size="14" font-weight="600">${stats.totalPRs}</text>
+                <text x="350" y="90" font-size="12" fill="${secondary}">Total PRs</text>
                 
                 <!-- Row 2 -->
-                <g transform="translate(0, 65)">
-                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.publicRepos}</text>
-                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Repositories</text>
-                </g>
-                <g transform="translate(250, 65)">
-                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.followers}</text>
-                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Followers</text>
-                </g>
-                <g transform="translate(500, 65)">
-                  <text x="0" y="25" fill="${titleColor}" font-family="Arial, sans-serif" font-size="28" font-weight="700">${stats.totalForks}</text>
-                  <text x="0" y="42" fill="${iconColor}" font-family="Arial, sans-serif" font-size="12" text-transform="uppercase">Total Forks</text>
-                </g>
+                <text x="25" y="120" font-size="14" font-weight="600">${stats.totalIssues}</text>
+                <text x="25" y="135" font-size="12" fill="${secondary}">Total Issues</text>
+                
+                <text x="175" y="120" font-size="14" font-weight="600">${stats.publicRepos}</text>
+                <text x="175" y="135" font-size="12" fill="${secondary}">Contributed to (last year)</text>
+                
+                <text x="350" y="120" font-size="14" font-weight="600">${stats.followers}</text>
+                <text x="350" y="135" font-size="12" fill="${secondary}">Followers</text>
               </g>
               
               <!-- Separator -->
-              <line x1="50" y1="250" x2="750" y2="250" stroke="${borderColor}" stroke-width="1"/>
+              <line x1="25" y1="155" x2="470" y2="155" stroke="${border}"/>
               
-              <!-- Contribution Stats -->
-              <g transform="translate(50, 270)">
-                <text x="0" y="18" fill="${iconColor}" font-family="Arial, sans-serif" font-size="13">Total Contributions</text>
-                <text x="700" y="18" text-anchor="end" fill="${titleColor}" font-family="Arial, sans-serif" font-size="15" font-weight="600">${stats.totalContributions}</text>
-                
-                <text x="250" y="18" fill="${iconColor}" font-family="Arial, sans-serif" font-size="13">Current Streak</text>
-                <text x="400" y="18" text-anchor="start" fill="${accentColor}" font-family="Arial, sans-serif" font-size="15" font-weight="600">${stats.currentStreak} days</text>
-                
-                <text x="450" y="18" fill="${iconColor}" font-family="Arial, sans-serif" font-size="13">Longest Streak</text>
-                <text x="580" y="18" text-anchor="start" fill="${titleColor}" font-family="Arial, sans-serif" font-size="15" font-weight="600">${stats.longestStreak} days</text>
+              <!-- Bottom Stats -->
+              <g fill="${text}" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+                <text x="25" y="175" font-size="13" font-weight="600">${stats.totalContributions} Total Contributions</text>
+                <text x="200" y="175" font-size="13" font-weight="600">${stats.currentStreak} Current Streak</text>
+                <text x="330" y="175" font-size="13" font-weight="600">${stats.longestStreak} Longest Streak</text>
+                <text x="470" y="175" font-size="11" fill="${secondary}" text-anchor="end">Since ${stats.memberSince}</text>
               </g>
-              
-              <!-- Footer -->
-              <text x="400" y="305" text-anchor="middle" fill="${iconColor}" font-family="Arial, sans-serif" font-size="10">Updated ${new Date().toLocaleDateString()}</text>
             </svg>`;
           }
           
           async function main() {
             const stats = await generateStats();
             
-            // Generate both themes
-            const darkSVG = generateSVG(stats, 'dark');
-            const lightSVG = generateSVG(stats, 'light');
+            const lightSVG = generateProfessionalSVG(stats, false);
+            const darkSVG = generateProfessionalSVG(stats, true);
             
-            // Write SVG files
-            fs.writeFileSync('github-stats-dark.svg', darkSVG);
             fs.writeFileSync('github-stats-light.svg', lightSVG);
+            fs.writeFileSync('github-stats-dark.svg', darkSVG);
             
-            console.log('Generated github-stats-dark.svg and github-stats-light.svg');
+            console.log('Generated professional GitHub stats cards');
           }
           
           main().catch(console.error);
           EOF
 
-          # Run the stats generation script
           node generate-stats.js
 
-      - name: Commit and push changes
+      - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add github-stats-*.svg
-          git diff --staged --quiet || git commit -m "Update GitHub stats [automated]"
+          git diff --staged --quiet || git commit -m "Update GitHub stats"
           git push
