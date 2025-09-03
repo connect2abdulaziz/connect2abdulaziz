@@ -63,13 +63,13 @@
 
 ---
 
-### Impact & activity
+### Impact & Activity
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="metrics-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="metrics-light.svg">
-    <img src="metrics-light.svg" alt="GitHub Stats" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="github-stats-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="github-stats-light.svg">
+    <img src="github-stats-light.svg" alt="GitHub Stats" width="400">
   </picture>
 </p>
 
