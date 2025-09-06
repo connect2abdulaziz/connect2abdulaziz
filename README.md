@@ -35,7 +35,6 @@
 * Design **event‑driven microservices** with Docker, queues, and observability
 * Build **AI assistants** (retrieval‑augmented generation, tools/agents) for real use‑cases
 * Lead teams: code reviews, roadmaps, hiring, mentoring
-
 ---
 
 ### Tech
