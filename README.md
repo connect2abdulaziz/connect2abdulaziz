@@ -37,6 +37,7 @@
 * Lead teams: code reviews, roadmaps, hiring, mentoring
 ---
 
+
 ### Tech
 
 <p align="center">
