@@ -103,7 +103,6 @@
 I build reliable software and mentor engineers. If you have a challenging platform problem or want to talk AI + product, reach out.
 
 ---
-
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,100:C850C0&height=120&section=footer&animation=twinkling" />
 
