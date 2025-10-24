@@ -106,6 +106,6 @@ I build reliable software and mentor engineers. If you have a challenging platfo
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,100:C850C0&height=120&section=footer&animation=twinkling" />
 
-<strong>"Passion + Precision = Innovation "</strong>
+<strong>Passion + Precision = Innovation</strong>
 
 </div>
