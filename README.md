@@ -8,7 +8,7 @@
 
 </div>
 
-<h3 align="center">Senior Software Engineer · AI Innovator · Team Lead @ <strong>Developer Tag</strong></h3>
+<h3 align="center">Tech Lead · Senior Backend Engineer · AI Innovator @ <strong>DeveloperTag</strong></h3>
 
 <p align="center">
   <a href="https://connect2abdulaziz-psi.vercel.app">Portfolio</a> ·
@@ -23,26 +23,57 @@
 ### At a glance
 
 * **3+ years** shipping scalable products (SaaS, dashboards, microservices)
-* **ICPC Asia 2023 — Top 10** · **LeetCode Top 5%**
-* Lead teams building **MERN/Next.js** platforms on **AWS** with solid DevOps
-* Production **AI/RAG** with LangChain/LangGraph
+* **ICPC Asia 2023 — Top 10** · **LeetCode Top 5% (300+ solved)**
+* Lead a team of 5 engineers building **NestJS/Next.js** platforms on **AWS** with solid DevOps
+* Production **AI/RAG** with LangChain, LangGraph & vector databases
 
 ---
 
 ### What I do
 
-* Architect & deliver **full‑stack systems** (Next.js/React · Node.js/Express · PostgreSQL/MongoDB)
-* Design **event‑driven microservices** with Docker, queues, and observability
-* Build **AI assistants** (retrieval augmented generation, tools/agents) for real use‑cases
-* Lead teams: code reviews, roadmaps, hiring, mentoring
+* Architect & deliver **scalable backend systems** (NestJS · Node.js/Express · PostgreSQL/MongoDB/Redis)
+* Design **event‑driven microservices** with Docker, queues (Bull/Kafka), and observability
+* Build **AI assistants & RAG pipelines** (LangChain/LangGraph, vector embeddings, conversational agents)
+* Implement **real‑time systems** with WebSockets, Socket.io, and Redis pub/sub
+* Design **authorization systems** (RBAC/ABAC with CASL, RLS, OAuth 2.0, JWT)
+* Lead teams: code reviews, architecture decisions, CI/CD, hiring & mentoring
+
 ---
 
+### Experience
+
+**Tech Lead / Senior Backend Engineer** · DeveloperTag *(Dec 2024 – Present)*
+> Leading 5 engineers · Architecting multi-tenant SaaS with RLS · Building AI chatbots & RAG pipelines · CI/CD with GitHub Actions, Docker & AWS ECS · 60% query performance improvement
+
+**Backend Engineer** · DiveScale *(Jun 2024 – Dec 2024)*
+> NestJS + GraphQL APIs · OAuth 2.0 & session management · Real-time chat with WebSockets · 85%+ test coverage with Jest
+
+**Associate Software Engineer** · Kwanso *(Jun 2023 – Jun 2024)*
+> Node.js/Express/NestJS services · PostgreSQL & MongoDB schemas · API documentation with Swagger · Code reviews & best practices
+
+---
 
 ### Tech
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,nodejs,express,python,langchain,mongodb,postgresql,aws,docker,git,graphql" />
+  <img src="https://skillicons.dev/icons?i=typescript,javascript,python,nodejs,nestjs,express,nextjs,react,postgresql,mongodb,redis,docker,aws,git" />
 </p>
+
+<details>
+<summary><strong>Full tech stack</strong></summary>
+
+| Category | Technologies |
+|---|---|
+| **Languages** | TypeScript, JavaScript, SQL, Python, Bash |
+| **Backend** | NestJS, Node.js, Express.js, Fastify, Next.js API Routes |
+| **Databases** | PostgreSQL, MongoDB, Redis, Supabase, Prisma, TypeORM, PostGIS, Pinecone |
+| **AI/ML** | LangChain, LangGraph, OpenAI API, RAG Pipelines, Vector Databases, Prompt Engineering |
+| **Real‑time** | WebSockets, Socket.io, Redis Pub/Sub, Bull Queues, Server‑Sent Events |
+| **Auth** | RBAC, ABAC, CASL, Row Level Security, JWT, OAuth 2.0, Session Management |
+| **DevOps** | Docker, AWS (EC2, ECS, S3, RDS, Lambda, CloudFront), GCP, GitHub Actions, Nginx |
+| **Practices** | Clean Architecture, DRY, SOLID, TDD, Swagger/OpenAPI, Jest |
+
+</details>
 
 ---
 
@@ -52,18 +83,24 @@
 
 <div align="center">
 
-| Project                        | What it does                                           | Stack                                         | Access                           |
-| ------------------------------ | ------------------------------------------------------ | --------------------------------------------- | -------------------------------- |
-| **LangGraph RAG Starter**      | Production‑grade RAG with evaluations & feedback loops | Python, LangChain/LangGraph, OpenAI, PgVector | 🔒 Internal (request case study) |
-| **Next.js SaaS Boilerplate**   | Auth, billing, dashboards, CRUD, testing               | Next.js 14, tRPC, Prisma, PostgreSQL, Stripe  | 🔒 Internal (request case study) |
-| **Event‑Driven Microservices** | Services with Kafka/NATS, SAGA/Outbox patterns         | Node.js, Docker, PostgreSQL, Kafka            | 🔒 Internal (request case study) |
-| **AI Support Bot**             | Multilingual support agent with tools & memory         | Python, FastAPI, LangChain, Redis             | 🔒 Internal (request case study) |
+| Project | What it does | Stack | Access |
+|---|---|---|---|
+| **SimplyFlow** | Workflow automation engine with n8n + AI agent decision making | NestJS, PostgreSQL, n8n, LangGraph, Docker, AWS | 🔒 Internal |
+| **Terzo.ai** | AI chatbot with RAG pipelines, semantic search & real‑time chat | NestJS, PostgreSQL, LangChain, OpenAI, Pinecone, Redis | 🔒 Internal |
+| **GuardXP** | Enterprise security ops platform with multi‑tenant isolation & event sourcing | NestJS, PostgreSQL, CASL, Docker, AWS, Turborepo | 🔒 In Progress |
+| **FitnessAds.ai** | AI‑powered ad generation with RAG & fitness consultation chatbot | NestJS, PostgreSQL, LangChain, LangGraph, Docker | 🔒 In Progress |
+| **SafeStreet** | Geospatial incident reporting with proximity alerts & real‑time notifications | NestJS, PostgreSQL, PostGIS, Redis, WebSockets | 🔒 Internal |
+| **QuizApp Platform** | Real‑time quiz competitions supporting 1000+ concurrent users | NestJS, PostgreSQL, WebSockets, Redis, Bull | 🔒 Internal |
+| **Learning Management System** | Course management with video streaming & live classes | NestJS, PostgreSQL, WebSockets, AWS S3, CloudFront | 🔒 Internal |
+| **4Corners** | E‑commerce with Stripe payments, inventory locking & file uploads | NestJS, PostgreSQL, Stripe, Redis, Docker, AWS S3 | 🔒 Internal |
+| **AutoPostMD** | Social media scheduling with queue‑based job processing | Node.js, PostgreSQL, Facebook/Instagram/LinkedIn APIs, Redis | 🔒 Internal |
 
 </div>
 
 ---
 
 ### Impact & activity
+
 <p align="center">
   <img width="49%" src="https://github-readme-stats-weld-iota-73.vercel.app/api?username=connect2abdulaziz&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=4158D0&icon_color=4158D0&text_color=FFFFFF&border_radius=10" />
   <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=connect2abdulaziz&theme=tokyonight&hide_border=true&background=0D1117&stroke=4158D0&ring=4158D0&fire=C850C0&currStreakLabel=C850C0&border_radius=10" />
@@ -76,7 +113,6 @@
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=connect2abdulaziz&bg_color=0D1117&color=4158D0&line=4158D0&point=C850C0&area=true&hide_border=true&theme=tokyo-night" />
 </p>
-
 
 ---
 
@@ -92,9 +128,16 @@
 ### Achievements
 
 * **ICPC Asia Online Preliminary 2023 – Top 10**
-* **LeetCode Top 5%** problem solver
+* **LeetCode Top 5%** problem solver (300+ problems)
 * Delivered **50+ projects** for global clients
 * Awarded **Student of the Year** (Akhuwat College)
+
+---
+
+### Education
+
+**PUCIT – Punjab University College of Information Technology** · BS Computer Science *(2019 – 2023)*
+> Data Structures, Algorithms, Database Systems, Operating Systems, Computer Networks, Software Engineering
 
 ---
 
