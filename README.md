@@ -150,3 +150,4 @@ I build reliable software and mentor engineers. If you have a challenging platfo
 
 <strong>Passion + Precision = Innovation</strong>
 </div>
+
