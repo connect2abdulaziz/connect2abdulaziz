@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4158D0,100:C850C0&height=160&section=header&text=Abdul%20Aziz&fontSize=48&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Senior%20Software%20Engineer%20%7C%20AI%20Innovator%20%7C%20Team%20Lead&descAlignY=55&descSize=18" />
 </div>
-  
+   
 <div align="center">
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code\&size=22\&duration=3000\&pause=1000\&color=4158D0\&center=true\&vCenter=true\&width=700\&lines=Building+Scalable+Full+Stack+Apps;AI+%26+LangChain+Integration+Specialist;ICPC+Top+10%20%7C%20LeetCode%20Top%205%25;Passionate%20Leader%20%26%20Mentor;Innovation%20Through%20Code)](https://git.io/typing-svg)
