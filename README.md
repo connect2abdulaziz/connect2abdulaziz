@@ -121,7 +121,11 @@ Node.js / Express / NestJS · PostgreSQL & MongoDB · Swagger · code reviews
 </p>
 
 <p align="center">
-  <img width="100%" src="./languages.svg" alt="Languages across public and private repositories" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./languages-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./languages-light.svg" />
+    <img width="100%" src="./languages-dark.svg" alt="Top languages across public and private repositories" />
+  </picture>
 </p>
 
 ---

@@ -47,6 +47,8 @@ jobs:
 
           git add \
             languages.svg \
+            languages-dark.svg \
+            languages-light.svg \
             github-stats-dark.svg \
             github-stats-light.svg \
             github-overview.svg \
