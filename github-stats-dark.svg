@@ -2,21 +2,10 @@
   <rect x="0.5" y="0.5" width="494" height="194" rx="8" fill="#0d1117" stroke="#30363d"/>
   <text x="28" y="36" fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" font-weight="600">Abdul Aziz's GitHub Stats</text>
   <rect x="390" y="18" width="78" height="22" rx="11" fill="#58a6ff"/>
-  <text x="429" y="33" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" text-anchor="middle">Since 2016</text>
+  <text x="429" y="33" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" text-anchor="middle">Since 2023</text>
   <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
-    <text x="28" y="72" fill="#e6edf3" font-size="18" font-weight="700">—</text>
-    <text x="28" y="90" fill="#8b949e" font-size="12">Total Stars</text>
-    <text x="183" y="72" fill="#e6edf3" font-size="18" font-weight="700">—</text>
-    <text x="183" y="90" fill="#8b949e" font-size="12">Commits (2026)</text>
-    <text x="338" y="72" fill="#e6edf3" font-size="18" font-weight="700">—</text>
-    <text x="338" y="90" fill="#8b949e" font-size="12">Pull Requests</text>
-    <text x="28" y="120" fill="#e6edf3" font-size="18" font-weight="700">—</text>
-    <text x="28" y="138" fill="#8b949e" font-size="12">Issues Opened</text>
-    <text x="183" y="120" fill="#e6edf3" font-size="18" font-weight="700">—</text>
-    <text x="183" y="138" fill="#8b949e" font-size="12">Repos Contributed</text>
-    <text x="338" y="120" fill="#e6edf3" font-size="18" font-weight="700">—</text>
-    <text x="338" y="138" fill="#8b949e" font-size="12">Followers</text>
+    <text x="28" y="72" fill="#e6edf3" font-size="18" font-weight="700">21</text><text x="28" y="90" fill="#8b949e" font-size="12">Total Stars</text><text x="183" y="72" fill="#e6edf3" font-size="18" font-weight="700">215</text><text x="183" y="90" fill="#8b949e" font-size="12">Commits (2026)</text><text x="338" y="72" fill="#e6edf3" font-size="18" font-weight="700">170</text><text x="338" y="90" fill="#8b949e" font-size="12">Pull Requests</text><text x="28" y="120" fill="#e6edf3" font-size="18" font-weight="700">9</text><text x="28" y="138" fill="#8b949e" font-size="12">Issues Opened</text><text x="183" y="120" fill="#e6edf3" font-size="18" font-weight="700">17</text><text x="183" y="138" fill="#8b949e" font-size="12">Repos Contributed</text><text x="338" y="120" fill="#e6edf3" font-size="18" font-weight="700">273</text><text x="338" y="138" fill="#8b949e" font-size="12">Followers</text>
   </g>
   <line x1="28" y1="168" x2="467" y2="168" stroke="#30363d"/>
-  <text x="28" y="184" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11">Self-hosted · run Daily Profile Refresh to populate</text>
+  <text x="28" y="184" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11">1.6k contributions this year · updated 2026-07-18</text>
 </svg>
