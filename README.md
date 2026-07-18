@@ -107,17 +107,21 @@ Node.js / Express / NestJS · PostgreSQL & MongoDB · Swagger · code reviews
 
 ### GitHub activity
 
+<!-- Self-hosted SVGs — refreshed daily by Actions (no vercel/heroku deps) -->
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=connect2abdulaziz&show_icons=true&count_private=true&include_all_commits=true&theme=transparent&hide_border=true&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9&bg_color=00000000" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=connect2abdulaziz&theme=transparent&hide_border=true&background=00000000&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideLabels=8B949E&sideNums=C9D1D9&dates=8B949E" alt="GitHub streak" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./github-stats-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./github-stats-light.svg" />
+    <img height="195" src="./github-stats-dark.svg" alt="GitHub stats" />
+  </picture>
+</p>
+
+<p align="center">
+  <img width="100%" src="./github-overview.svg" alt="GitHub activity overview" />
 </p>
 
 <p align="center">
   <img width="100%" src="./languages.svg" alt="Languages across public and private repositories" />
-</p>
-
-<p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=connect2abdulaziz&bg_color=00000000&color=58A6FF&line=58A6FF&point=C9D1D9&area=true&hide_border=true&custom_title=Contribution%20activity" alt="Activity graph" />
 </p>
 
 ---

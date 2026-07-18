@@ -1,42 +1,22 @@
-<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0.5" y="0.5" width="494" height="194" rx="4.5" fill="#0d1117" stroke="#21262d"/>
-    
-    <!-- Header -->
-    <text x="25" y="35" fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="600">Abdul Aziz's GitHub Stats</text>
-    <rect x="400" y="20" width="70" height="20" rx="10" fill="#58a6ff"/>
-    <text x="435" y="32" fill="white" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Rank B+</text>
-    
-    <!-- Stats Grid -->
-    <g fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
-      <!-- Row 1 -->
-      <text x="25" y="75" font-size="14" font-weight="600">22</text>
-      <text x="25" y="90" font-size="12" fill="#8b949e">Total Stars Earned</text>
-      
-      <text x="175" y="75" font-size="14" font-weight="600">575</text>
-      <text x="175" y="90" font-size="12" fill="#8b949e">Total Commits (2025)</text>
-      
-      <text x="350" y="75" font-size="14" font-weight="600">93</text>
-      <text x="350" y="90" font-size="12" fill="#8b949e">Total PRs</text>
-      
-      <!-- Row 2 -->
-      <text x="25" y="120" font-size="14" font-weight="600">1</text>
-      <text x="25" y="135" font-size="12" fill="#8b949e">Total Issues</text>
-      
-      <text x="175" y="120" font-size="14" font-weight="600">67</text>
-      <text x="175" y="135" font-size="12" fill="#8b949e">Contributed to (last year)</text>
-      
-      <text x="350" y="120" font-size="14" font-weight="600">273</text>
-      <text x="350" y="135" font-size="12" fill="#8b949e">Followers</text>
-    </g>
-    
-    <!-- Separator -->
-    <line x1="25" y1="155" x2="470" y2="155" stroke="#21262d"/>
-    
-    <!-- Bottom Stats -->
-    <g fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
-      <text x="25" y="175" font-size="13" font-weight="600">2048 Total Contributions</text>
-      <text x="200" y="175" font-size="13" font-weight="600">16 Current Streak</text>
-      <text x="330" y="175" font-size="13" font-weight="600">86 Longest Streak</text>
-      <text x="470" y="175" font-size="11" fill="#8b949e" text-anchor="end">Since 2023</text>
-    </g>
-  </svg>
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abdul Aziz GitHub stats">
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="28" y="36" fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" font-weight="600">Abdul Aziz's GitHub Stats</text>
+  <rect x="390" y="18" width="78" height="22" rx="11" fill="#58a6ff"/>
+  <text x="429" y="33" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" text-anchor="middle">Since 2016</text>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+    <text x="28" y="72" fill="#e6edf3" font-size="18" font-weight="700">—</text>
+    <text x="28" y="90" fill="#8b949e" font-size="12">Total Stars</text>
+    <text x="183" y="72" fill="#e6edf3" font-size="18" font-weight="700">—</text>
+    <text x="183" y="90" fill="#8b949e" font-size="12">Commits (2026)</text>
+    <text x="338" y="72" fill="#e6edf3" font-size="18" font-weight="700">—</text>
+    <text x="338" y="90" fill="#8b949e" font-size="12">Pull Requests</text>
+    <text x="28" y="120" fill="#e6edf3" font-size="18" font-weight="700">—</text>
+    <text x="28" y="138" fill="#8b949e" font-size="12">Issues Opened</text>
+    <text x="183" y="120" fill="#e6edf3" font-size="18" font-weight="700">—</text>
+    <text x="183" y="138" fill="#8b949e" font-size="12">Repos Contributed</text>
+    <text x="338" y="120" fill="#e6edf3" font-size="18" font-weight="700">—</text>
+    <text x="338" y="138" fill="#8b949e" font-size="12">Followers</text>
+  </g>
+  <line x1="28" y1="168" x2="467" y2="168" stroke="#30363d"/>
+  <text x="28" y="184" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11">Self-hosted · run Daily Profile Refresh to populate</text>
+</svg>

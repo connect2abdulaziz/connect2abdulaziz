@@ -29,14 +29,15 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Generate languages chart
+      - name: Generate profile graphics
         env:
           GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
-        run: python3 scripts/generate_languages_chart.py
+          GH_USERNAME: connect2abdulaziz
+        run: |
+          python3 scripts/generate_languages_chart.py
+          python3 scripts/generate_stats_cards.py
 
       - name: Commit and push
-        env:
-          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
           set -euo pipefail
 
@@ -44,7 +45,13 @@ jobs:
           git config user.name "connect2abdulaziz"
           git config user.email "connect2abdulaziz@users.noreply.github.com"
 
-          git add languages.svg data/last-refresh.json
+          git add \
+            languages.svg \
+            github-stats-dark.svg \
+            github-stats-light.svg \
+            github-overview.svg \
+            data/last-refresh.json
+
           if git diff --staged --quiet; then
             echo "No profile changes to commit"
             exit 0
