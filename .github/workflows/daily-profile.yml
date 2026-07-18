@@ -1,0 +1,55 @@
+# Daily profile maintenance — refreshes language chart & commits as you.
+# Requires repo secret: METRICS_TOKEN (classic PAT with repo scope)
+# Commits use your verified GitHub noreply email so they count on your graph.
+name: Daily Profile Refresh
+
+on:
+  schedule:
+    - cron: "30 5 * * *" # 05:30 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate languages chart
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: python3 scripts/generate_languages_chart.py
+
+      - name: Commit and push
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          # Attribute commits to your account (required for contribution graph)
+          git config user.name "connect2abdulaziz"
+          git config user.email "connect2abdulaziz@users.noreply.github.com"
+
+          git add languages.svg data/last-refresh.json
+          if git diff --staged --quiet; then
+            echo "No profile changes to commit"
+            exit 0
+          fi
+
+          DATE=$(date -u +%Y-%m-%d)
+          git commit -m "chore(profile): daily refresh ${DATE}"
+          git push
