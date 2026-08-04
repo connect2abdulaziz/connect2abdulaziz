@@ -2,7 +2,7 @@
 <rect x="32" y="72" width="776" height="10" rx="5" fill="#21262d"/>
 <rect x="32.0" y="72" width="334.5" height="10" fill="#4F5D95"/>
 <rect x="366.5" y="72" width="304.6" height="10" fill="#f1e05a"/>
-<rect x="671.0" y="72" width="106.0" height="10" fill="#3178c6"/>
+<rect x="671.1" y="72" width="106.0" height="10" fill="#3178c6"/>
 <rect x="777.1" y="72" width="14.6" height="10" fill="#67b8de"/>
 <rect x="791.7" y="72" width="16.3" height="10" fill="#8b949e"/>
 <rect x="32" y="72" width="776" height="10" rx="5" fill="none" stroke="#0d1117" stroke-width="0"/>
@@ -16,7 +16,7 @@
 <text x="54" y="157" fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="500" dominant-baseline="middle">JavaScript</text>
 <rect x="424" y="152" width="320" height="8" rx="4" fill="#21262d"/>
 <rect x="424" y="152" width="125.6" height="8" rx="4" fill="#f1e05a"/>
-<text x="808" y="157" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle"> 39.2%</text>
+<text x="808" y="157" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle"> 39.3%</text>
 <circle cx="38" cy="192" r="5" fill="#3178c6"/>
 <text x="54" y="193" fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="500" dominant-baseline="middle">TypeScript</text>
 <rect x="424" y="188" width="320" height="8" rx="4" fill="#21262d"/>
@@ -32,6 +32,6 @@
 <rect x="424" y="260" width="320" height="8" rx="4" fill="#21262d"/>
 <rect x="424" y="260" width="6.7" height="8" rx="4" fill="#8b949e"/>
 <text x="808" y="265" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle">  2.1%</text>
-<text x="32" y="316" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">Updated 2026-08-03</text>
+<text x="32" y="316" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">Updated 2026-08-04</text>
 <text x="808" y="316" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" text-anchor="end">Self-hosted · daily refresh</text>
 </svg>
