@@ -2,9 +2,9 @@
 <rect x="32" y="72" width="776" height="10" rx="5" fill="#eaeef2"/>
 <rect x="32.0" y="72" width="332.2" height="10" fill="#4F5D95"/>
 <rect x="364.2" y="72" width="306.3" height="10" fill="#f1e05a"/>
-<rect x="670.5" y="72" width="106.5" height="10" fill="#3178c6"/>
-<rect x="777.0" y="72" width="14.5" height="10" fill="#67b8de"/>
-<rect x="791.5" y="72" width="16.5" height="10" fill="#8b949e"/>
+<rect x="670.4" y="72" width="106.5" height="10" fill="#3178c6"/>
+<rect x="776.9" y="72" width="14.5" height="10" fill="#67b8de"/>
+<rect x="791.4" y="72" width="16.6" height="10" fill="#8b949e"/>
 <rect x="32" y="72" width="776" height="10" rx="5" fill="none" stroke="#ffffff" stroke-width="0"/>
 <rect x="32" y="72" width="776" height="10" rx="5" fill="none" stroke="#d0d7de" stroke-width="1" opacity="0.35"/>
 <circle cx="38" cy="120" r="5" fill="#4F5D95"/>
@@ -32,6 +32,6 @@
 <rect x="424" y="260" width="320" height="8" rx="4" fill="#eaeef2"/>
 <rect x="424" y="260" width="6.8" height="8" rx="4" fill="#8b949e"/>
 <text x="808" y="265" fill="#656d76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle">  2.1%</text>
-<text x="32" y="316" fill="#656d76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">Updated 2026-08-17</text>
+<text x="32" y="316" fill="#656d76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">Updated 2026-08-18</text>
 <text x="808" y="316" fill="#656d76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" text-anchor="end">Self-hosted · daily refresh</text>
 </svg>
