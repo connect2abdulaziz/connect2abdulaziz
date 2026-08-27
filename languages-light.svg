@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="334" viewBox="0 0 840 334" role="img" aria-label="Top languages"><rect x="0.5" y="0.5" width="839" height="333" rx="12" fill="#ffffff" stroke="#d0d7de"/><text x="32" y="38" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" font-weight="600">Top Languages</text><text x="808" y="38" fill="#656d76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" text-anchor="end">Across public &amp; private repos</text><rect x="32" y="50" width="40" height="3" rx="1.5" fill="#58a6ff"/>
 <rect x="32" y="72" width="776" height="10" rx="5" fill="#eaeef2"/>
-<rect x="32.0" y="72" width="330.5" height="10" fill="#4F5D95"/>
-<rect x="362.5" y="72" width="306.0" height="10" fill="#f1e05a"/>
-<rect x="668.5" y="72" width="107.6" height="10" fill="#3178c6"/>
-<rect x="776.1" y="72" width="14.4" height="10" fill="#67b8de"/>
-<rect x="790.5" y="72" width="17.5" height="10" fill="#8b949e"/>
+<rect x="32.0" y="72" width="330.4" height="10" fill="#4F5D95"/>
+<rect x="362.4" y="72" width="305.5" height="10" fill="#f1e05a"/>
+<rect x="667.9" y="72" width="107.7" height="10" fill="#3178c6"/>
+<rect x="775.6" y="72" width="14.4" height="10" fill="#67b8de"/>
+<rect x="790.0" y="72" width="18.0" height="10" fill="#8b949e"/>
 <rect x="32" y="72" width="776" height="10" rx="5" fill="none" stroke="#ffffff" stroke-width="0"/>
 <rect x="32" y="72" width="776" height="10" rx="5" fill="none" stroke="#d0d7de" stroke-width="1" opacity="0.35"/>
 <circle cx="38" cy="120" r="5" fill="#4F5D95"/>
 <text x="54" y="121" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="500" dominant-baseline="middle">PHP</text>
 <rect x="424" y="116" width="320" height="8" rx="4" fill="#eaeef2"/>
-<rect x="424" y="116" width="136.3" height="8" rx="4" fill="#4F5D95"/>
+<rect x="424" y="116" width="136.2" height="8" rx="4" fill="#4F5D95"/>
 <text x="808" y="121" fill="#656d76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle"> 42.6%</text>
 <circle cx="38" cy="156" r="5" fill="#f1e05a"/>
 <text x="54" y="157" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="500" dominant-baseline="middle">JavaScript</text>
 <rect x="424" y="152" width="320" height="8" rx="4" fill="#eaeef2"/>
-<rect x="424" y="152" width="126.2" height="8" rx="4" fill="#f1e05a"/>
+<rect x="424" y="152" width="126.0" height="8" rx="4" fill="#f1e05a"/>
 <text x="808" y="157" fill="#656d76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle"> 39.4%</text>
 <circle cx="38" cy="192" r="5" fill="#3178c6"/>
 <text x="54" y="193" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="500" dominant-baseline="middle">TypeScript</text>
@@ -30,8 +30,8 @@
 <circle cx="38" cy="264" r="5" fill="#8b949e"/>
 <text x="54" y="265" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="500" dominant-baseline="middle">Other</text>
 <rect x="424" y="260" width="320" height="8" rx="4" fill="#eaeef2"/>
-<rect x="424" y="260" width="7.2" height="8" rx="4" fill="#8b949e"/>
+<rect x="424" y="260" width="7.4" height="8" rx="4" fill="#8b949e"/>
 <text x="808" y="265" fill="#656d76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle">  2.3%</text>
-<text x="32" y="316" fill="#656d76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">Updated 2026-08-26</text>
+<text x="32" y="316" fill="#656d76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">Updated 2026-08-27</text>
 <text x="808" y="316" fill="#656d76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" text-anchor="end">Self-hosted · daily refresh</text>
 </svg>
