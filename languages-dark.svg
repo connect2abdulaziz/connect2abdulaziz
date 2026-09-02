@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="334" viewBox="0 0 840 334" role="img" aria-label="Top languages"><rect x="0.5" y="0.5" width="839" height="333" rx="12" fill="#0d1117" stroke="#30363d"/><text x="32" y="38" fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="18" font-weight="600">Top Languages</text><text x="808" y="38" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" text-anchor="end">Across public &amp; private repos</text><rect x="32" y="50" width="40" height="3" rx="1.5" fill="#58a6ff"/>
 <rect x="32" y="72" width="776" height="10" rx="5" fill="#21262d"/>
-<rect x="32.0" y="72" width="330.1" height="10" fill="#4F5D95"/>
-<rect x="362.1" y="72" width="305.2" height="10" fill="#f1e05a"/>
-<rect x="667.4" y="72" width="108.2" height="10" fill="#3178c6"/>
+<rect x="32.0" y="72" width="330.0" height="10" fill="#4F5D95"/>
+<rect x="362.0" y="72" width="305.4" height="10" fill="#f1e05a"/>
+<rect x="667.4" y="72" width="108.1" height="10" fill="#3178c6"/>
 <rect x="775.5" y="72" width="14.4" height="10" fill="#67b8de"/>
 <rect x="789.9" y="72" width="18.1" height="10" fill="#8b949e"/>
 <rect x="32" y="72" width="776" height="10" rx="5" fill="none" stroke="#0d1117" stroke-width="0"/>
@@ -16,7 +16,7 @@
 <text x="54" y="157" fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="500" dominant-baseline="middle">JavaScript</text>
 <rect x="424" y="152" width="320" height="8" rx="4" fill="#21262d"/>
 <rect x="424" y="152" width="125.9" height="8" rx="4" fill="#f1e05a"/>
-<text x="808" y="157" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle"> 39.3%</text>
+<text x="808" y="157" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle"> 39.4%</text>
 <circle cx="38" cy="192" r="5" fill="#3178c6"/>
 <text x="54" y="193" fill="#e6edf3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="500" dominant-baseline="middle">TypeScript</text>
 <rect x="424" y="188" width="320" height="8" rx="4" fill="#21262d"/>
@@ -32,6 +32,6 @@
 <rect x="424" y="260" width="320" height="8" rx="4" fill="#21262d"/>
 <rect x="424" y="260" width="7.4" height="8" rx="4" fill="#8b949e"/>
 <text x="808" y="265" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" text-anchor="end" dominant-baseline="middle">  2.3%</text>
-<text x="32" y="316" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">Updated 2026-09-01</text>
+<text x="32" y="316" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">Updated 2026-09-02</text>
 <text x="808" y="316" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" text-anchor="end">Self-hosted · daily refresh</text>
 </svg>
