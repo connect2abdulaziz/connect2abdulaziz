@@ -1,9 +1,9 @@
 {
-  "lastRefresh": "2026-09-18T09:58:47.873354+00:00",
+  "lastRefresh": "2026-09-19T09:40:23.250098+00:00",
   "languages": [
     {
       "name": "PHP",
-      "percent": 42.37
+      "percent": 42.35
     },
     {
       "name": "JavaScript",
@@ -11,7 +11,7 @@
     },
     {
       "name": "TypeScript",
-      "percent": 14.05
+      "percent": 14.07
     },
     {
       "name": "Liquid",
